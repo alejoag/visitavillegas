@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+body, ul {
+    font-family: 'poppins';
+}
+body {
+    background-color: #f4f4f4;
+    position: relative;
+}
+
+/*!----NAV-----*/
+nav {
+    text-align: center;
+    padding: 1rem;
+}
+nav div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img {
+    width: 300px;
+    height: auto;
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin: 1rem;
+    margin-left: 3rem;
+}
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    margin-right: 3rem;    
+}
+nav ul li a {
+    text-decoration: none;
+    color: #034069;
+    font-weight: normal;
+    font-variant-caps: all-petite-caps;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/*!----VIDEO----*/
+.video-container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 24px;
+}
+
+.video-container iframe {
+    max-width: 100%; 
+    margin-left: 0px; 
+    width: 100%; 
+    height: 100vh;
+}
+
+/*!----MAIN----*/
+main {
+    display: flex;
+    flex-direction: column;
+    padding-left: 24px;
+    padding-right: 24px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+main h1 {
+    color: #034069;
+    padding-bottom: 24px;
+}
+main p {
+    color: gray;
+    width: 50%;
+
+}
+
+main hr {
+    border-color:#034069;
+    width: 50%;
+    margin: 24px;
+}
+
+/*!----CARDS----*/
+.card-display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+}
+.card-container {
+    display: flex;
+    flex: 0 0 25%;
+    margin: 1rem;
+    align-items: baseline;
+    height: 200px;
+    position: relative;
+    border: #034069 solid;
+    border-radius: 16px;
+    background-color: white;
+    
+}
+.card-data h3 {
+    color: #034069;
+    padding-bottom: 16px;
+}
+.card-data p {
+    color: grey;
+    padding-right: 24px;
+}
+.card-container i {
+    font-size: 1.5rem;
+    padding: 1rem;
+    color: #ff0066;
+}
+.card-data a {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding-right: 24px;
+    padding-bottom: 24px;
+    text-decoration: none;
+    color:#034069; 
+}
+
+/*! CARDS PARA PAGINA QUE HACES*/
+.card-quehacer-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 0 80%;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+.card-quehacer-data {
+    background-color: white;
+    border-radius: 16px;
+    border: #034069 solid;
+    flex: 1 1 calc(33.333% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+.card-quehacer-data h3 {
+    color: #034069;
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+.card-quehacer-data p {
+    font-size: 1em;
+    color:grey;
+}
+.card-quehacer-data a {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding-right: 24px;
+    padding-bottom: 24px;
+    text-decoration: none;
+    color:#034069; 
+}
+
+.card-quehacer-data img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+}
+
+/*!----TABLA DONDE COMER----*/
+table {
+    border-collapse:collapse;
+    border: #034069 solid;
+    margin-bottom: 24px;
+}
+
+th, td {
+    border: 3px solid #034069;
+    background-color: white;
+    text-align: left;
+    padding: 16px;
+}
+
+
+.restaurante-info h2 {
+    font-size: 1.2rem;
+    color:#034069;
+}
+
+.restaurante-info div p {
+    display: inline;
+    font-size: 0.9rem;
+    color:#ff0066;
+    padding: 16px;
+}
+/*!----DONDE COMER SECTION----*/
+.donde-comer-header h2{
+    color: #034069;
+}
+
+.donde-comer-header p{
+    color: grey;
+}
+/*!----DONDE DORMIR SECTION----*/
+.localidades-container, .donde-comer-header, .que-hacer-header, .contacto-header, .mapa-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 24px;
+}
+.localidades-container h2, .donde-comer-header h2, .que-hacer-header h2, .contacto-header h2, .mapa-header h2 {
+    color: #034069;
+}
+
+.localidades-container p, .donde-comer-header p, .que-hacer-header p, .contacto-header p, .mapa-header p {
+    color: grey;
+}
+.localidades {
+    width: 60%;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: #034069 solid;
+    border-radius: 16px;
+}
+
+.localidad {
+    margin-bottom: 20px;
+}
+
+.localidad-label {
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #034069;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.hoteles {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.localidad input[type="checkbox"] {
+    display: none;
+}
+
+.localidad input[type="checkbox"]:checked + .localidad-label + .hoteles {
+    display: block;
+}
+
+.hotel {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.hotel h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.hotel p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #666;
+}
+/*!----FOOTER----*/
+footer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    flex: 0 0 100%;
+    border-radius: 24px 24px 0px 0px;
+    background-color: #034069;
+    font-size: 12px;
+    padding-top: 24px;
+    padding-left: 24px;
+    padding-bottom: 24px;
+}
+
+.container-data-uno {
+    display: flex;
+    flex-direction: column;
+    padding-left: 12px;
+}
+
+.container-data-dos {
+    display: flex;  
+    margin-right: 8rem;
+}
+
+footer .container-data-uno h3 {
+    color: #f4f4f4;
+    font-size: 16px;
+    
+}
+
+footer .container-data-uno strong {
+    font-size: 14px;
+}
+
+footer .container-data-dos p {
+    color: #f4f4f4;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+footer .container-data-dos ul {
+    display: flex;
+    list-style: none;
+}
+footer .container-data-dos ul li a {
+    color: #f4f4f4;
+    font-size: 1.5rem;
+    padding: 1rem
+}
+
+.container-derecho {
+    padding-left: 24px;
+}
+
+footer img {
+    width: 250px;
+    height: auto;
+    margin-left: 4rem;
+    margin-top: 2rem;
+
+}
+
+footer hr {
+    border-color: white;
+}
+
+/*Formulario de contacto*/
+.form-container {
+    width: 500px;
+    background-color: #fff;
+    padding: 20px;
+    border: #034069 solid;
+    border-radius: 16px;
+    box-sizing: border-box;
+    font-family: 'poppins';
+    color:#034069;
+    margin-bottom: 24px;
+    
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-item {
+    margin-bottom: 20px;
+}
+
+.form-icon {
+    color: #ff0066;
+}
+
+label {
+    display: flex;
+    margin-bottom: 5px;
+    
+}
+
+input[type="text"], input[type="email"], input[type="tel"], textarea {
+    width: 100%;
+    padding: 10px;
+    border: #034069 solid;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color:#034069;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'poppins';
+}
+
+button:hover {
+    background-color:#ff0066;
+}
+
+.mapa {
+    margin-bottom: 24px;
+}
+/*Animacion del menu principal*/
+
+nav ul li a:hover, footer ul li a i:hover, .card-data a:hover {
+    color: #ff0066;
+}
+
+.localidad-label:hover {
+    background-color: #e0e0e0;
+}
