@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
     --c-familyfont: "poppins";
     --c-color-a: #034069;
@@ -8,37 +9,61 @@
     --c-font-weight: ;
     --c-padding-a: 1rem;
 }
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;   
+    box-sizing: border-box;
 }
-body, ul {
+
+body,
+ul {
     font-family: var(--c-familyfont);
 }
+
 body {
-    background-color: #f4f4f4;
+    background-color: #f8f9fa;
     position: relative;
 }
 
-                                        /*!---Aplica estilos a los iconos de redes ---*/
-.nav-icono{
+header{
+    background: #ff0066;
+}
+
+nav img {
+    width: 200px;
+}
+
+.nav-link {
+    display: block;
+    padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+    font-size: var(--c-font-size);
+    font-weight: var(--bs-nav-link-font-weight);
+    color: var(--c-color-a);
+    text-decoration: none;
+    text-transform: uppercase;
+    background: none;
+    border: 0;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+.nav-link:hover {
+    color: var(--c-color-hover);
+}
+
+/*!---Aplica estilos a los iconos de redes ---*/
+.nav-icono {
     list-style: none;
     padding-right: 1rem;
     padding-left: 1rem;
     font-size: 1.5rem;
 }
-.nav-icono-contenedor{
+
+.nav-icono-contenedor {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-}
-                                        /*!---Cambio la ubicacion de los iconos de redes en version pequeña--*/
-@media screen and (max-width: 992px) {
-    .nav-icono-contenedor{
-        justify-content: flex-start;
-    }
 }
 
 /*!----MAIN----*/
@@ -50,32 +75,40 @@ main {
     justify-content: center;
     align-items: center;
     text-align: center;
-    
+
 }
+
 main h1 {
     color: #034069;
     padding-bottom: 24px;
+    padding-top: 24px;
 }
+
 main p {
     color: gray;
-    width: 50%;
+    width: 80%;
 
 }
 
 main hr {
-    border-color:#034069;
+    border-color: #034069;
     width: 50%;
     margin: 24px;
 }
 
 /*!----CARDS----*/
 .card-display {
-    display: flex;
+    /*display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-bottom: 16px;
+    margin-bottom: 16px;*/
+    display: grid;
+    grid-template-areas:
+        "a-uno b-uno c-uno"
+        "a-dos b-dos c-dos";
 }
+
 .card-container {
     display: flex;
     flex: 0 0 25%;
@@ -86,21 +119,25 @@ main hr {
     border: #034069 solid;
     border-radius: 16px;
     background-color: white;
-    
+
 }
+
 .card-data h3 {
     color: #034069;
     padding-bottom: 16px;
 }
+
 .card-data p {
     color: grey;
     padding-right: 24px;
 }
+
 .card-container i {
     font-size: 1.5rem;
     padding: 1rem;
     color: #ff0066;
 }
+
 .card-data a {
     position: absolute;
     right: 0;
@@ -108,63 +145,28 @@ main hr {
     padding-right: 24px;
     padding-bottom: 24px;
     text-decoration: none;
-    color:#034069; 
-}
-
-/*! CARDS PARA PAGINA QUE HACES*/
-.card-quehacer-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex: 0 0 80%;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
-}
-.card-quehacer-data {
-    background-color: white;
-    border-radius: 16px;
-    border: #034069 solid;
-    flex: 1 1 calc(33.333% - 20px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-}
-.card-quehacer-data h3 {
     color: #034069;
-    font-size: 1.5em;
-    margin: 10px 0;
-}
-.card-quehacer-data p {
-    font-size: 1em;
-    color:grey;
-}
-.card-quehacer-data a {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    padding-right: 24px;
-    padding-bottom: 24px;
-    text-decoration: none;
-    color:#034069; 
 }
 
-.card-quehacer-data img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px 10px 0 0;
+/*!----PAGINA DE ACTIVIDADES----*/
+.cards-section{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 24px;
+}
+.c-card{
+    border: #034069 solid;
 }
 
 /*!----TABLA DONDE COMER----*/
 table {
-    border-collapse:collapse;
+    border-collapse: collapse;
     border: #034069 solid;
     margin-bottom: 24px;
 }
 
-th, td {
+th,
+td {
     border: 3px solid #034069;
     background-color: white;
     text-align: left;
@@ -174,38 +176,54 @@ th, td {
 
 .restaurante-info h2 {
     font-size: 1.2rem;
-    color:#034069;
+    color: #034069;
 }
 
 .restaurante-info div p {
     display: inline;
     font-size: 0.9rem;
-    color:#ff0066;
+    color: #ff0066;
     padding: 16px;
 }
+
 /*!----DONDE COMER SECTION----*/
-.donde-comer-header h2{
+.donde-comer-header h2 {
     color: #034069;
 }
 
-.donde-comer-header p{
+.donde-comer-header p {
     color: grey;
 }
+
 /*!----DONDE DORMIR SECTION----*/
-.localidades-container, .donde-comer-header, .que-hacer-header, .contacto-header, .mapa-header{
+.localidades-container,
+.donde-comer-header,
+.que-hacer-header,
+.contacto-header,
+.mapa-header {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding-bottom: 24px;
 }
-.localidades-container h2, .donde-comer-header h2, .que-hacer-header h2, .contacto-header h2, .mapa-header h2 {
+
+.localidades-container h2,
+.donde-comer-header h2,
+.que-hacer-header h2,
+.contacto-header h2,
+.mapa-header h2 {
     color: #034069;
 }
 
-.localidades-container p, .donde-comer-header p, .que-hacer-header p, .contacto-header p, .mapa-header p {
+.localidades-container p,
+.donde-comer-header p,
+.que-hacer-header p,
+.contacto-header p,
+.mapa-header p {
     color: grey;
 }
+
 .localidades {
     width: 60%;
     margin: 20px;
@@ -243,7 +261,7 @@ th, td {
     display: none;
 }
 
-.localidad input[type="checkbox"]:checked + .localidad-label + .hoteles {
+.localidad input[type="checkbox"]:checked+.localidad-label+.hoteles {
     display: block;
 }
 
@@ -262,19 +280,17 @@ th, td {
     font-size: 0.9em;
     color: #666;
 }
+
 /*!----FOOTER----*/
 footer {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    width: 100%;
-    flex: 0 0 100%;
+    display: grid;
     border-radius: 24px 24px 0px 0px;
-    background-color: #034069;
     font-size: 12px;
     padding-top: 24px;
     padding-left: 24px;
     padding-bottom: 24px;
+    background: #034069;
+    grid-template-areas: "logo data";
 }
 
 .container-data-uno {
@@ -284,14 +300,14 @@ footer {
 }
 
 .container-data-dos {
-    display: flex;  
+    display: flex;
     margin-right: 8rem;
 }
 
 footer .container-data-uno h3 {
     color: #f4f4f4;
     font-size: 16px;
-    
+
 }
 
 footer .container-data-uno strong {
@@ -303,10 +319,12 @@ footer .container-data-dos p {
     margin-block-start: 0em;
     margin-block-end: 0em;
 }
+
 footer .container-data-dos ul {
     display: flex;
     list-style: none;
 }
+
 footer .container-data-dos ul li a {
     color: #f4f4f4;
     font-size: 1.5rem;
@@ -338,9 +356,9 @@ footer hr {
     border-radius: 16px;
     box-sizing: border-box;
     font-family: 'poppins';
-    color:#034069;
+    color: #034069;
     margin-bottom: 24px;
-    
+
 }
 
 h2 {
@@ -359,10 +377,13 @@ h2 {
 label {
     display: flex;
     margin-bottom: 5px;
-    
+
 }
 
-input[type="text"], input[type="email"], input[type="tel"], textarea {
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
     width: 100%;
     padding: 10px;
     border: #034069 solid;
@@ -371,7 +392,7 @@ input[type="text"], input[type="email"], input[type="tel"], textarea {
 }
 
 button {
-    background-color:#034069;
+    background-color: #034069;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -381,18 +402,91 @@ button {
 }
 
 button:hover {
-    background-color:#ff0066;
+    background-color: #ff0066;
 }
 
 .mapa {
     margin-bottom: 24px;
 }
+
 /*Animacion del menu principal*/
 
-nav ul li a:hover, footer ul li a i:hover, .card-data a:hover {
+nav ul li a:hover,
+footer ul li a i:hover,
+.card-data a:hover {
     color: #ff0066;
 }
 
 .localidad-label:hover {
     background-color: #e0e0e0;
+}
+
+@media screen and (max-width: 1210px) {
+    .card-display {
+        grid-template-areas:
+            "a-uno b-uno"
+            "c-uno a-dos"
+            "b-dos c-dos";
+    }
+
+    footer {
+        grid-template-areas:
+            "logo"
+            "data";
+        justify-content: center;
+        margin: 0px;
+        padding: 0px;
+    }
+}
+
+/*!---Cambio la ubicacion de los iconos de redes en version pequeña--*/
+@media screen and (max-width: 992px) {
+    .nav-icono-contenedor {
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .card-display {
+        grid-template-areas:
+            "a-uno"
+            "b-uno"
+            "c-uno"
+            "a-dos"
+            "b-dos"
+            "c-dos";
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .container-data-dos {
+        flex-direction: column;
+    }
+
+    .logo-footer {
+        padding: 16px;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    footer img {
+        margin: 0px;
+    }
+
+    footer .container-data-uno h3 {
+        padding-top: 16px;
+    }
+
+    .footer-hr {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .container-derecho {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        padding: 0px;
+    }
 }

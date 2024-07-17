@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../css/styles.css">
-        <link rel="stylesheet" href="../css/bootstrap.css"> 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <script src="https://kit.fontawesome.com/35c03c9305.js" crossorigin="anonymous"></script>
-    
-        <title>Visitá Villegas</title>
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/35c03c9305.js" crossorigin="anonymous"></script>
+
+    <title>Visitá Villegas</title>
+</head>
+
 <body>
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -22,89 +26,130 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link" aria-current="page" href="../index.html">Inicio</a></li>
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
                         <li class="nav-item"><a class="nav-link" href="mapa.html">Mapa</a></li>
                         <li class="nav-item"><a class="nav-link" href="actividades.html">Actividades</a></li>
                         <li class="nav-item"><a class="nav-link" href="hospedajes.html">Hospedajes</a></li>
                         <li class="nav-item"><a class="nav-link" href="gastronomia.html">Gastronomía</a></li>
                         <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-                        <div class="nav-icono-contenedor">
-                            <li><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook nav-icono"></i></a></li>
-                            <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram nav-icono"></i></a></li>                      
-                        </div>
+                    </ul>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-icono-contenedor">
+                        Seguinos:
+                        <li><a href="https://www.facebook.com/" target="_blank"><i
+                                    class="fa-brands fa-square-facebook nav-icono"></i></a></li>
+                        <li><a href="https://www.instagram.com/" target="_blank"><i
+                                    class="fa-brands fa-square-instagram nav-icono"></i></a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    
-        <section class="que-hacer-header">
-            <h2>Actividades</h2>
-            <p>Oferta de actividades deportivas y culturales para disfrutar del tiempo libre.</p>
-        </section>
-    <section class="card-quehacer-container">
-        <div class="card-quehacer-data">
-            <div>
-                <img src="../img/foto cards.png" alt="foto del escritor Manuel Puid">
+
+    <section class="que-hacer-header">
+        <h2>Actividades</h2>
+        <p>Oferta de actividades deportivas y culturales para disfrutar del tiempo libre.</p>
+    </section>
+    <section class="cards-section">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col ">
+                <div class="card c-card">
+                    <img src="../img/puig.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Circuito Manuel Puig</h5>
+                        <p class="card-text">Recorrido por las calle y lugares de General Villegas que forjaron a este escritor de fama internacional.</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Dirección: Moreno 846</li>
+                            <li class="list-group-item">Días y horarios: lun a vie de 7 a 19hs</li>
+                            <li class="list-group-item">Contacto: 03388 15509161</li>
+                        </ul>
+                    </div>
+
+                </div>
             </div>
-            <div>
-                <h3>Circuito uno</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis debitis labore neque quia vel vitae aliquid ipsum, unde vero facere odit doloremque impedit, animi dolorum nisi pariatur minus officia quaerat. </p>
+
+            <div class="col ">
+                <div class="card c-card">
+                    <img src="../img/kayak.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">"La Botera"</h5>
+                        <p class="card-text">Si te apasionan los deportes acuaticos, visita La Botera y disfruta de una tarde de remo.</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Dirección: Parque Municipal</li>
+                            <li class="list-group-item">Días y horarios: consultar</li>
+                            <li class="list-group-item">Contacto: 03388 15455798</li>
+                        </ul>
+                    </div>
+
+                </div>
             </div>
-            
+
+            <div class="col ">
+                <div class="card c-card">
+                    <img src="../img/parque.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Balneario Municipal "Aldo Rodríguez Orozco"</h5>
+                        <p class="card-text">En verano te esperamos en la pileta.</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Dirección: Parque Municipal</li>
+                            <li class="list-group-item">Días y horarios: Todos los dias de 13 a 19hs</li>
+                            <li class="list-group-item">Contacto: 03388 15509161</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col ">
+                <div class="card c-card">
+                    <img src="../img/alonso.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Museo Carlos Alonso</h5>
+                        <p class="card-text">Visitá la muestra permanente "La Guerra al Malon" del artista plástico Carlos Alonso.</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Dirección: Moreno y Pringles</li>
+                            <li class="list-group-item">Días y horarios: mier a dom 16 a 19hs</li>
+                            <li class="list-group-item">Contacto: 03388 15411034</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col ">
+                <div class="card c-card">
+                    <img src="../img/puig.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Camping municipal</h5>
+                        <p class="card-text">Pasa un tiempo en la naturaleza y disfruta de los atractivos del parque municipal local.</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Dirección: Parque Municipal</li>
+                            <li class="list-group-item">Días y horarios: las 24hs</li>
+                            <li class="list-group-item">Contacto: 03388 15509161</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col ">
+                <div class="card c-card">
+                    <img src="../img/mhr.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Museo Histórico Regional</h5>
+                        <p class="card-text">Conocé el patrimonio histórico de la comunidad de Villegas.</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Dirección: Predio del ferrocarril</li>
+                            <li class="list-group-item">Días y horarios: lun a dom de 10 a 19hs</li>
+                            <li class="list-group-item">Contacto: 03388 15509161</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
         </div>
-        <div class="card-quehacer-data">
-            <div>
-                <img src="../img/foto cards.png" alt="foto del escritor Manuel Puid">
-            </div>
-            <div>
-                <h3>Circuito dos</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis debitis labore neque quia vel vitae aliquid ipsum, unde vero facere odit doloremque impedit, animi dolorum nisi pariatur minus officia quaerat. </p>
-            </div>
-            
-        </div>
-        <div class="card-quehacer-data">
-            <div>
-                <img src="../img/foto cards.png" alt="foto del escritor Manuel Puid">
-            </div>
-            <div>
-                <h3>Circuito tres</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis debitis labore neque quia vel vitae aliquid ipsum, unde vero facere odit doloremque impedit, animi dolorum nisi pariatur minus officia quaerat. </p>
-            </div>
-            
-        </div>
-        <div class="card-quehacer-data">
-            <div>
-                <img src="../img/foto cards.png" alt="foto del escritor Manuel Puid">
-            </div>
-            <div>
-                <h3>Circuito cuatro</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis debitis labore neque quia vel vitae aliquid ipsum, unde vero facere odit doloremque impedit, animi dolorum nisi pariatur minus officia quaerat. </p>
-            </div>
-            
-        </div>
-        <div class="card-quehacer-data">
-            <div>
-                <img src="../img/foto cards.png" alt="foto del escritor Manuel Puid">
-            </div>
-            <div>
-                <h3>Circuito cinco</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis debitis labore neque quia vel vitae aliquid ipsum, unde vero facere odit doloremque impedit, animi dolorum nisi pariatur minus officia quaerat. </p>
-            </div>
-            
-        </div>
-        <div class="card-quehacer-data">
-            <div>
-                <img src="../img/foto cards.png" alt="foto del escritor Manuel Puid">
-            </div>
-            <div>
-                <h3>Circuito seis</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis debitis labore neque quia vel vitae aliquid ipsum, unde vero facere odit doloremque impedit, animi dolorum nisi pariatur minus officia quaerat. </p>
-            </div>
-            
-        </div>
-        
+
     </section>
     <footer>
         <!--Logo de "Visitá Villegas" + redes sociales-->
@@ -120,22 +165,26 @@
                 <div>
                     <h3>Contactanos:</h3>
                     <p><strong>Telefono: </strong>03388 44444444 <br>
-                    <strong >Correo electrónico: </strong>deporte@villegas.com <br>
-                    <strong>Oficinas: </strong>Parque municipal <br>
-                    <strong>Días y horarios: </strong>De lunes a viernes: 6 a 19hs</p>
+                        <strong>Correo electrónico: </strong>deporte@villegas.com <br>
+                        <strong>Oficinas: </strong>Parque municipal <br>
+                        <strong>Días y horarios: </strong>De lunes a viernes: 6 a 19hs
+                    </p>
                 </div>
-                <div class="container-derecho"> 
+                <div class="container-derecho">
                     <h3>Seguinos:</h3>
                     <div>
                         <ul>
-                            <li><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a></li>
-                            <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a></li>
+                            <li><a href="https://www.facebook.com/" target="_blank"><i
+                                        class="fa-brands fa-square-facebook"></i></a></li>
+                            <li><a href="https://www.instagram.com/" target="_blank"><i
+                                        class="fa-brands fa-square-instagram"></i></a></li>
                         </ul>
                     </div>
-                </div>     
+                </div>
             </div>
         </div>
     </footer>
     <script src="../js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
