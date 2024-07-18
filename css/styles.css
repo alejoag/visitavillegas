@@ -3,8 +3,12 @@
 :root {
     --c-familyfont: "poppins";
     --c-color-a: #034069;
+    --c-color-titulos: #034069;
+    --c-color-border: #034069;
     --c-color-p: gray;
     --c-color-hover: #ff0066;
+    --c-color-background: #ff0066;
+    --c-color-btn: #034069;
     --c-font-size: 1rem;
     --c-font-weight: ;
     --c-padding-a: 1rem;
@@ -26,13 +30,10 @@ body {
     position: relative;
 }
 
-header {
-    background: #ff0066;
-}
-
 nav img {
     width: 200px;
 }
+
 
 .nav-link {
     display: block;
@@ -49,6 +50,18 @@ nav img {
 
 .nav-link:hover {
     color: var(--c-color-hover);
+}
+
+.pag-titulo {
+    color: var(--c-color-titulos);
+    padding-top: 24px;
+}
+
+.pag-parrafo {
+    color: var(--c-color-p);
+    padding-left: 24px;
+    padding-right: 24px;
+    text-align: center;
 }
 
 /*!---Aplica estilos a los iconos de redes ---*/
@@ -79,31 +92,25 @@ main {
 }
 
 main h1 {
-    color: #034069;
+    color: var(--c-color-titulos);
     padding-bottom: 24px;
     padding-top: 24px;
 }
 
 main p {
-    color: gray;
+    color: var(--c-color-p);
     width: 80%;
 
 }
 
 main hr {
-    border-color: #034069;
+    border-color: var(--c-color-a);
     width: 50%;
     margin: 24px;
 }
-/*!----Slide----*/
 
 /*!----CARDS----*/
 .card-display {
-    /*display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 16px;*/
     display: grid;
     grid-template-areas:
         "a-uno b-uno c-uno"
@@ -117,7 +124,7 @@ main hr {
     align-items: baseline;
     height: 200px;
     position: relative;
-    border: #034069 solid;
+    border: var(--c-color-border) solid;
     border-radius: 16px;
     background-color: white;
 
@@ -129,14 +136,14 @@ main hr {
 }
 
 .card-data p {
-    color: grey;
+    color: var(--c-color-p);
     padding-right: 24px;
 }
 
 .card-container i {
     font-size: 1.5rem;
     padding: 1rem;
-    color: #ff0066;
+    color: var(--c-color-hover);
 }
 
 .card-data a {
@@ -146,7 +153,7 @@ main hr {
     padding-right: 24px;
     padding-bottom: 24px;
     text-decoration: none;
-    color: #034069;
+    color: var(--c-color-a);
 }
 
 /*!----PAGINA DE ACTIVIDADES----*/
@@ -158,22 +165,6 @@ main hr {
 
 .c-card {
     border: #034069 solid;
-}
-
-/*!----DONDE COMER SECTION----*/
-.pag-titulo {
-    color: var(--c-color-a);
-    padding-top: 24px;
-}
-
-.pag-parrafo {
-    color: grey;
-    padding-left: 24px;
-    padding-right: 24px;
-    text-align: center;
-}
-@media screen and (max-width: 950px){
-
 }
 
 /*!----DONDE DORMIR SECTION----*/
@@ -191,7 +182,7 @@ main hr {
     margin: 20px;
     padding: 20px;
     background-color: #fff;
-    border: #034069 solid;
+    border: var(--c-color-border) solid;
     border-radius: 16px;
 }
 
@@ -243,6 +234,37 @@ main hr {
     color: #666;
 }
 
+.gastronomia{
+    list-style: none;
+}
+.gastronomia h5{
+    color: var(--c-color-a);
+}
+.gastronomia p{
+    color: grey;
+}
+
+.gastronomia-container {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 24px;
+}
+/*!---PUEBLOS---*/
+.pueblos{
+    padding-left: 180px;
+    padding-right: 180px;
+    padding-top: 24px;
+}
+.c-btn{
+    background-color: var(--c-color-btn);
+    border: none;
+    border-radius: 16px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.c-btn:hover{
+    background-color: var(--c-color-hover);
+}
 /*!----FOOTER----*/
 footer {
     display: grid;
