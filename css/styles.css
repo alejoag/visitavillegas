@@ -384,25 +384,6 @@ footer ul li a i:hover,
 
 
 
-/*!---NAV - Cambio la ubicacion de los iconos de redes--*/
-@media screen and (max-width: 992px) {
-    .nav-icono-contenedor {
-        justify-content: flex-start;
-    }
-}
-
-@media screen and (max-width: 740px) {
-    .card-display {
-        grid-template-areas:
-            "a-uno"
-            "b-uno"
-            "c-uno"
-            "a-dos"
-            "b-dos"
-            "c-dos";
-    }
-}
-/*!---FOOTER --*/
 @media screen and (max-width: 1210px) {
     .card-display {
         grid-template-areas:
@@ -433,6 +414,29 @@ footer ul li a i:hover,
         margin: 0px;
     }
 }
+@media screen and (max-width: 992px) {
+    .nav-icono-contenedor {
+        justify-content: flex-start;
+    }
+}
+@media screen and (max-width: 960px) {
+    .pueblos{
+        padding-left: 80px;
+        padding-right: 80px;
+        padding-top: 24px;
+    }
+}
+@media screen and (max-width: 740px) {
+    .card-display {
+        grid-template-areas:
+            "a-uno"
+            "b-uno"
+            "c-uno"
+            "a-dos"
+            "b-dos"
+            "c-dos";
+    }
+}
 @media screen and (max-width: 712px) {
     .card-display {
         grid-template-areas:
@@ -442,6 +446,18 @@ footer ul li a i:hover,
             "a-dos"
             "b-dos"
             "c-dos";
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .pueblos{
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: 24px;
+    }
+    .c-btn{
+        margin-right: 2px;
+        margin-left: 2px;
     }
 }
 @media screen and (max-width: 610px) {
