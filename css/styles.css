@@ -421,7 +421,7 @@ footer ul li a i:hover,
     }
     footer h3{
         padding: 16px 0px 0px 0px;
-        margin: 0px 0px 0px 8px;
+    
     }
     .logo-footer {
         padding: 16px;
@@ -433,9 +433,21 @@ footer ul li a i:hover,
         margin: 0px;
     }
 }
+@media screen and (max-width: 712px) {
+    .card-display {
+        grid-template-areas:
+            "a-uno" 
+            "b-uno"
+            "c-uno"
+            "a-dos"
+            "b-dos"
+            "c-dos";
+    }
+}
 @media screen and (max-width: 610px) {
     .container-data-dos {
         flex-direction: column;
+        margin-right: 0px;
     }
 
     .logo-footer {
@@ -451,6 +463,10 @@ footer ul li a i:hover,
         align-items: baseline;
         padding: 0px;
     }
+}
+
+@media screen and (max-width: 432px) {
+
 }
 
 /*!---FORM - Cambio tamaño del formulario--*/
