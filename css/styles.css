@@ -414,6 +414,17 @@ footer ul li a i:hover,
         margin: 0px;
     }
 }
+@media screen and (max-width: 1196px) {
+    .pueblos{
+        padding-left: 80px;
+        padding-right: 80px;
+        padding-top: 24px;
+    }
+    .c-btn{
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+}
 @media screen and (max-width: 992px) {
     .nav-icono-contenedor {
         justify-content: flex-start;
