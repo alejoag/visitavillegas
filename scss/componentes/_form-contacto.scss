@@ -1,0 +1,46 @@
+.form-container{
+    width: 500px;
+    background-color: #fff;
+    padding: 20px;
+    border: #034069 solid;
+    border-radius: 16px;
+    box-sizing: border-box;
+    font-family: 'poppins';
+    color: #034069;
+    margin-bottom: 24px;
+    h2{
+        margin-bottom: 20px;
+    text-align: center;
+        i{
+
+        }
+    }
+    form{
+        .form-item{
+            margin-bottom: 20px;
+            label{
+                display: flex;
+                margin-bottom: 5px;
+            }
+            input, textarea{
+                width: 100%;
+                padding: 10px;
+                border: var(--c-color-border) solid;
+                border-radius: 12px;
+                box-sizing: border-box;
+            }
+        }
+        button{
+            background-color: #034069;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'poppins';
+            &:hover{
+                background-color: var(--c-color-hover);
+            }
+        }
+    }
+}

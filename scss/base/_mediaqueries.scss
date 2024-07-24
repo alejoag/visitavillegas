@@ -1,0 +1,129 @@
+
+@media screen and (max-width: 1210px) {
+    .card-display {
+        grid-template-areas:
+            "a-uno b-uno"
+            "c-uno a-dos"
+            "b-dos c-dos";
+    }
+
+    footer {
+        grid-template-areas:
+            "logo"
+            "data";
+        justify-content: center;
+        margin: 0px;
+        padding: 0px;
+    }
+    footer h3{
+        padding: 16px 0px 0px 0px;
+    
+    }
+    .logo-footer {
+        padding: 16px;
+        display: flex;
+        justify-content: center;
+
+    }
+    footer img{
+        margin: 0px;
+    }
+}
+@media screen and (max-width: 1196px) {
+    .pueblos{
+        padding-left: 80px;
+        padding-right: 80px;
+        padding-top: 24px;
+    }
+    .c-btn{
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+}
+@media screen and (max-width: 992px) {
+    .nav-icono-contenedor {
+        justify-content: flex-start;
+    }
+}
+@media screen and (max-width: 960px) {
+    .pueblos{
+        padding-left: 80px;
+        padding-right: 80px;
+        padding-top: 24px;
+    }
+}
+@media screen and (max-width: 910px) {
+    main p{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 740px) {
+    .card-display {
+        grid-template-areas:
+            "a-uno"
+            "b-uno"
+            "c-uno"
+            "a-dos"
+            "b-dos"
+            "c-dos";
+    }
+}
+@media screen and (max-width: 712px) {
+    .card-display {
+        grid-template-areas:
+            "a-uno" 
+            "b-uno"
+            "c-uno"
+            "a-dos"
+            "b-dos"
+            "c-dos";
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .pueblos{
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: 24px;
+    }
+    .c-btn{
+        margin-right: 2px;
+        margin-left: 2px;
+    }
+}
+@media screen and (max-width: 610px) {
+    .container-data-dos {
+        flex-direction: column;
+        margin-right: 0px;
+    }
+
+    .logo-footer {
+        padding: 16px;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .container-derecho {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        padding: 0px;
+    }
+}
+
+@media screen and (max-width: 432px) {
+
+}
+
+/*!---FORM - Cambio tamaño del formulario--*/
+@media  screen and (max-width: 555px) {
+    .form-container{
+        width: 395px;
+    }
+}
+@media  screen and (max-width: 400px) {
+    .form-container{
+        width: 345px;
+    }
+}

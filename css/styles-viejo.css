@@ -35,7 +35,7 @@ nav img {
 }
 
 
-.nav-link {
+/*.nav-link {
     display: block;
     padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
     font-size: var(--c-font-size);
@@ -65,7 +65,7 @@ nav img {
 }
 
 /*!---Aplica estilos a los iconos de redes ---*/
-.nav-icono {
+/* .nav-icono {
     list-style: none;
     padding-right: 1rem;
     padding-left: 1rem;
@@ -77,10 +77,10 @@ nav img {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-}
+}*/
 
 /*!----MAIN----*/
-main {
+/*main {
     display: flex;
     flex-direction: column;
     padding-left: 24px;
@@ -107,10 +107,10 @@ main hr {
     border-color: var(--c-color-a);
     width: 50%;
     margin: 24px;
-}
+}*/
 
 /*!----CARDS----*/
-.card-display {
+/*.card-display {
     display: grid;
     grid-template-areas:
         "a-uno b-uno c-uno"
@@ -154,10 +154,10 @@ main hr {
     padding-bottom: 24px;
     text-decoration: none;
     color: var(--c-color-a);
-}
+}*/
 
 /*!----PAGINA DE ACTIVIDADES----*/
-.cards-section {
+/*.cards-section {
     padding-left: 2rem;
     padding-right: 2rem;
     padding-bottom: 24px;
@@ -165,10 +165,10 @@ main hr {
 
 .c-card {
     border: #034069 solid;
-}
+}*/
 
 /*!----DONDE DORMIR SECTION----*/
-.localidades-container {
+/*.localidades-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -232,8 +232,8 @@ main hr {
     margin: 5px 0;
     font-size: 0.9em;
     color: #666;
-}
-
+}*/
+/*
 .gastronomia{
     list-style: none;
 }
@@ -248,7 +248,8 @@ main hr {
     padding-left: 24px;
     padding-right: 24px;
     padding-bottom: 24px;
-}
+}*/
+
 /*!---PUEBLOS---*/
 .pueblos{
     padding-left: 180px;
@@ -266,7 +267,7 @@ main hr {
     background-color: var(--c-color-hover);
 }
 /*!----FOOTER----*/
-footer {
+/*footer {
     display: grid;
     border-radius: 24px 24px 0px 0px;
     font-size: 12px;
@@ -306,10 +307,10 @@ footer img {
     margin-left: 4rem;
     margin-top: 2rem;}
 footer hr {
-    border-color: white;}
+    border-color: white;}*/
 
 /*Formulario de contacto*/
-.form-container {
+/*.form-container {
     width: 500px;
     background-color: #fff;
     padding: 20px;
@@ -364,7 +365,7 @@ button {
 
 button:hover {
     background-color: #ff0066;
-}
+}*/
 
 .mapa {
     margin-bottom: 24px;

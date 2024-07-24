@@ -1,0 +1,47 @@
+.card-display{
+    display: grid;
+    grid-template-areas:
+        "a-uno b-uno c-uno"
+        "a-dos b-dos c-dos";
+.card-container{
+    display: flex;
+flex: 0 0 25%;
+margin: 1rem;
+align-items: baseline;
+height: 200px;
+position: relative;
+border: var(--c-color-border) solid;
+border-radius: 16px;
+background-color: white;
+
+    div{
+        i{
+            font-size: 1.5rem;
+            padding: 1rem;
+            color: var(--c-color-hover);
+        }
+    }
+    .card-data{
+        h3{
+            color: #034069;
+            padding-bottom: 16px;
+        }
+        p{
+            color: var(--c-color-p);
+            padding-right: 24px;
+        }
+        a{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            padding-right: 24px;
+            padding-bottom: 24px;
+            text-decoration: none;
+            color: var(--c-color-a);
+            &:hover{
+                color: var(--c-color-hover);
+            }
+        }
+    }
+}
+}

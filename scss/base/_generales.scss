@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --c-familyfont: "poppins";
+    --c-color-a: #034069;
+    --c-color-titulos: #034069;
+    --c-color-border: #034069;
+    --c-color-p: gray;
+    --c-color-hover: #ff0066;
+    --c-color-background: #ff0066;
+    --c-color-btn: #034069;
+    --c-font-size: 1rem;
+    --c-font-weight: ;
+    --c-padding-a: 1rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+ul {
+    font-family: var(--c-familyfont);
+}
+
+body {
+    background-color: #f8f9fa;
+    position: relative;
+}
+
+/*BOOTSTRAP*/
+/*NAV*/
+nav {
+    img {
+        width: 200px;
+    }
+
+    .nav-link {
+        display: block;
+        padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+        font-size: var(--c-font-size);
+        font-weight: var(--bs-nav-link-font-weight);
+        color: var(--c-color-a);
+        text-decoration: none;
+        text-transform: uppercase;
+        background: none;
+        border: 0;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+
+        &:hover {
+            color: var(--c-color-hover);
+        }
+    }
+
+    .nav-icono-contenedor {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        .nav-icono {
+            list-style: none;
+            padding-right: 1rem;
+            padding-left: 1rem;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+/*CARDS ACTIVIDADES*/
+.cards-section {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 24px;
+
+    .c-card {
+        border: #034069 solid;
+    }
+}
+
+/*CARDS GASTRONOMIA*/
+.gastronomia-container {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 24px;
+
+    .row {
+        .col {
+            .card {
+                border: var(--c-color-border) solid;
+
+                .card-body {
+                    .gastronomia {
+                        list-style: none;
+
+                        .card-title {
+                            color: var(--c-color-a);
+                        }
+
+                        p {
+                            color: grey;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+.encabezados {
+    text-align: center;
+
+    .pag-titulo {
+        color: var(--c-color-titulos);
+        padding-top: 24px;
+    }
+
+    .pag-parrafo {
+        color: var(--c-color-p);
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
