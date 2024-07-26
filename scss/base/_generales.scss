@@ -31,24 +31,17 @@ body {
 }
 
 /*BOOTSTRAP*/
+
 /*NAV*/
 nav {
     img {
-        width: 200px;
+        width: 300px;
     }
 
     .nav-link {
-        display: block;
-        padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
         font-size: var(--c-font-size);
-        font-weight: var(--bs-nav-link-font-weight);
         color: var(--c-color-a);
-        text-decoration: none;
         text-transform: uppercase;
-        background: none;
-        border: 0;
-        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
-
         &:hover {
             color: var(--c-color-hover);
         }
@@ -65,6 +58,9 @@ nav {
             padding-right: 1rem;
             padding-left: 1rem;
             font-size: 1.5rem;
+            &:hover{
+                color: var(--c-color-hover);
+            }
         }
     }
 }

@@ -13,22 +13,25 @@
             "data";
         justify-content: center;
         margin: 0px;
-        padding: 0px;
     }
-    footer h3{
-        padding: 16px 0px 0px 0px;
+
+    footer .container-data-uno div h3 {
+        padding: 8px 0px 8px 0px;
     
     }
-    .logo-footer {
-        padding: 16px;
+    footer .logo-footer{
         display: flex;
         justify-content: center;
+    }
 
+    footer .logo-footer img {
+        padding: 8px;
+        margin-left: 0;
+        margin-top: 0;
     }
-    footer img{
-        margin: 0px;
-    }
+    
 }
+
 @media screen and (max-width: 1196px) {
     .pueblos{
         padding-left: 80px;
@@ -41,7 +44,7 @@
     }
 }
 @media screen and (max-width: 992px) {
-    .nav-icono-contenedor {
+    nav .nav-icono-contenedor {
         justify-content: flex-start;
     }
 }
@@ -98,7 +101,7 @@
     }
 
     .logo-footer {
-        padding: 16px;
+        padding: 8px;
         display: flex;
         justify-content: center;
 
@@ -113,13 +116,32 @@
 }
 
 @media screen and (max-width: 432px) {
-
+    .container-data-uno{
+        
+        padding-left: 24px;
+    }
 }
 
 /*!---FORM - Cambio tamaño del formulario--*/
 @media  screen and (max-width: 555px) {
     .form-container{
         width: 395px;
+    }
+}
+
+@media screen and (max-width:405px){
+    footer .logo-footer img{
+        padding: 0;
+        width: 300px;
+    }
+    footer .container-data-uno div h3{
+        padding-left: 50px;
+    }
+    footer .container-data-uno div hr{
+        padding: 8px;
+    }
+    footer .container-data-dos div p{
+        padding-left: 50px;
     }
 }
 @media  screen and (max-width: 400px) {
