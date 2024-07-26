@@ -13,6 +13,26 @@
     --c-font-weight: ;
     --c-padding-a: 1rem;
 }
+/*VARIABLES GLOBALES*/
+$c-familyfont: "poppins";
+$c-color-a: #034069;
+$c-color-titulos: #034069;
+$c-color-p: gray;
+$c-color-a-l: white;
+$c-color-titulos-l: white;
+$c-color-p-l: white;
+$c-color-hover: #ff0066;
+$c-font-size: 1rem;
+$c-padding-a: 1rem;
+$c-color-border: #034069;
+$c-color-acento: #ff0066; 
+$c-color-background: #f8f9fa;
+$c-color-b-item: white;
+$c-color-b-footer: #034069;
+$c-color-btn: #034069;
+
+
+
 
 * {
     margin: 0;
@@ -22,11 +42,11 @@
 
 body,
 ul {
-    font-family: var(--c-familyfont);
+    font-family: $c-familyfont;
 }
 
 body {
-    background-color: #f8f9fa;
+    background-color: $c-color-background;
     position: relative;
 }
 
@@ -39,11 +59,11 @@ nav {
     }
 
     .nav-link {
-        font-size: var(--c-font-size);
-        color: var(--c-color-a);
+        font-size: $c-font-size;
+        color: $c-color-a;
         text-transform: uppercase;
         &:hover {
-            color: var(--c-color-hover);
+            color: $c-color-hover;
         }
     }
 
@@ -58,8 +78,9 @@ nav {
             padding-right: 1rem;
             padding-left: 1rem;
             font-size: 1.5rem;
+            color: $c-color-a;
             &:hover{
-                color: var(--c-color-hover);
+                color: $c-color-hover;
             }
         }
     }
@@ -72,7 +93,7 @@ nav {
     padding-bottom: 24px;
 
     .c-card {
-        border: #034069 solid;
+        border: $c-color-border solid;
     }
 }
 
@@ -85,18 +106,18 @@ nav {
     .row {
         .col {
             .card {
-                border: var(--c-color-border) solid;
+                border: $c-color-border solid;
 
                 .card-body {
                     .gastronomia {
                         list-style: none;
 
                         .card-title {
-                            color: var(--c-color-a);
+                            color: $c-color-a;
                         }
 
                         p {
-                            color: grey;
+                            color: $c-color-p;
                         }
                     }
                 }
@@ -112,12 +133,12 @@ nav {
     text-align: center;
 
     .pag-titulo {
-        color: var(--c-color-titulos);
+        color: $c-color-titulos;
         padding-top: 24px;
     }
 
     .pag-parrafo {
-        color: var(--c-color-p);
+        color: $c-color-p;
         padding-left: 24px;
         padding-right: 24px;
     }

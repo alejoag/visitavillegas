@@ -13,6 +13,7 @@
   --c-font-weight: ;
   --c-padding-a: 1rem; }
 
+/*VARIABLES GLOBALES*/
 * {
   margin: 0;
   padding: 0;
@@ -20,7 +21,7 @@
 
 body,
 ul {
-  font-family: var(--c-familyfont); }
+  font-family: "poppins"; }
 
 body {
   background-color: #f8f9fa;
@@ -32,11 +33,11 @@ nav img {
   width: 300px; }
 
 nav .nav-link {
-  font-size: var(--c-font-size);
-  color: var(--c-color-a);
+  font-size: 1rem;
+  color: #034069;
   text-transform: uppercase; }
   nav .nav-link:hover {
-    color: var(--c-color-hover); }
+    color: #ff0066; }
 
 nav .nav-icono-contenedor {
   display: flex;
@@ -47,9 +48,10 @@ nav .nav-icono-contenedor {
     list-style: none;
     padding-right: 1rem;
     padding-left: 1rem;
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    color: #034069; }
     nav .nav-icono-contenedor .nav-icono:hover {
-      color: var(--c-color-hover); }
+      color: #ff0066; }
 
 /*CARDS ACTIVIDADES*/
 .cards-section {
@@ -65,28 +67,29 @@ nav .nav-icono-contenedor {
   padding-right: 24px;
   padding-bottom: 24px; }
   .gastronomia-container .row .col .card {
-    border: var(--c-color-border) solid; }
+    border: #034069 solid; }
     .gastronomia-container .row .col .card .card-body .gastronomia {
       list-style: none; }
       .gastronomia-container .row .col .card .card-body .gastronomia .card-title {
-        color: var(--c-color-a); }
+        color: #034069; }
       .gastronomia-container .row .col .card .card-body .gastronomia p {
-        color: grey; }
+        color: gray; }
 
 .encabezados {
   text-align: center; }
   .encabezados .pag-titulo {
-    color: var(--c-color-titulos);
+    color: #034069;
     padding-top: 24px; }
   .encabezados .pag-parrafo {
-    color: var(--c-color-p);
+    color: gray;
     padding-left: 24px;
     padding-right: 24px; }
 
 /*CARDS HOME*/
 .card-display {
   display: grid;
-  grid-template-areas: "a-uno b-uno c-uno" "a-dos b-dos c-dos"; }
+  grid-template-areas: "a-uno b-uno c-uno" "a-dos b-dos c-dos";
+  padding: 0 16px 24px 16px; }
   .card-display .card-container {
     display: flex;
     flex: 0 0 25%;
@@ -94,18 +97,18 @@ nav .nav-icono-contenedor {
     align-items: baseline;
     height: 200px;
     position: relative;
-    border: var(--c-color-border) solid;
+    border: #034069 solid;
     border-radius: 16px;
     background-color: white; }
     .card-display .card-container div i {
       font-size: 1.5rem;
       padding: 1rem;
-      color: var(--c-color-hover); }
+      color: #ff0066; }
     .card-display .card-container .card-data h3 {
       color: #034069;
       padding-bottom: 16px; }
     .card-display .card-container .card-data p {
-      color: var(--c-color-p);
+      color: gray;
       padding-right: 24px; }
     .card-display .card-container .card-data a {
       position: absolute;
@@ -114,9 +117,9 @@ nav .nav-icono-contenedor {
       padding-right: 24px;
       padding-bottom: 24px;
       text-decoration: none;
-      color: var(--c-color-a); }
+      color: #034069; }
       .card-display .card-container .card-data a:hover {
-        color: var(--c-color-hover); }
+        color: #ff0066; }
 
 /*MAPA*/
 /*HOSPEDAJES*/
@@ -220,7 +223,7 @@ footer {
     padding-left: 12px;
     padding-right: 12px; }
     footer .container-data-uno div h3 {
-      color: #f4f4f4;
+      color: white;
       font-size: 16px;
       padding: 16px;
       margin: 0; }
@@ -238,7 +241,7 @@ footer {
       padding: 12px;
       margin: 0; }
     footer .container-data-dos div p {
-      color: #f4f4f4;
+      color: white;
       margin-block-start: 0em;
       margin-block-end: 0em;
       padding: 0 12px 12px 12px; }
@@ -248,11 +251,11 @@ footer {
         display: flex;
         list-style: none; }
         footer .container-data-dos .container-derecho div ul li a {
-          color: #ffffff;
+          color: white;
           font-size: 1.5rem;
           padding: 0 1rem 1rem 1rem; }
           footer .container-data-dos .container-derecho div ul li a:hover {
-            color: var(--c-color-hover); }
+            color: #ff0066; }
 
 /*MEDIAQUERIES*/
 @media screen and (max-width: 1210px) {
