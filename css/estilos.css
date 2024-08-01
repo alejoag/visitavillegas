@@ -64,43 +64,42 @@ footer {
 
 /*MODIFICACIONES A LOS COMPONENTES DE BOOTSTRAP*/
 /*NAV*/
-nav .container-fluid .collapse {
-  color: #034069; }
-  nav .container-fluid .collapse ul .underline {
-    position: relative;
-    font-size: 1rem;
-    color: #034069;
-    text-transform: uppercase; }
-    nav .container-fluid .collapse ul .underline::after {
-      content: '';
-      /* Crea un contenido vacío */
-      display: block;
-      /* Convierte el pseudo-elemento en un bloque */
-      width: 0;
-      /* Ancho inicial del subrayado */
-      height: 4px;
-      /* Altura del subrayado */
-      background: #034069;
-      /* Color del subrayado */
-      transition: width 0.3s;
-      /* Transición suave para el efecto de subrayado */
-      position: absolute;
-      /* Posiciona el pseudo-elemento de forma absoluta */
-      left: 0;
-      /* Alinea el pseudo-elemento a la izquierda */
-      bottom: -2px;
-      /* Coloca el pseudo-elemento debajo del texto */ }
-    nav .container-fluid .collapse ul .underline:hover::after {
-      width: 100%;
-      /* Expande el subrayado al 100% del ancho del enlace */ }
-    nav .container-fluid .collapse ul .underline .nav-link {
-      color: #034069; }
-      nav .container-fluid .collapse ul .underline .nav-link:hover {
-        color: #ff0066;
-        font-weight: bold; }
-  nav .container-fluid .collapse ul .actual {
-    font-weight: bold;
-    color: #ff0066; }
+nav .container-fluid .collapse ul .underline {
+  position: relative;
+  font-size: 1rem;
+  color: #034069;
+  text-transform: uppercase; }
+  nav .container-fluid .collapse ul .underline::after {
+    content: '';
+    /* Crea un contenido vacío */
+    display: block;
+    /* Convierte el pseudo-elemento en un bloque */
+    width: 0;
+    /* Ancho inicial del subrayado */
+    height: 4px;
+    /* Altura del subrayado */
+    background: #034069;
+    /* Color del subrayado */
+    transition: width 0.3s;
+    /* Transición suave para el efecto de subrayado */
+    position: absolute;
+    /* Posiciona el pseudo-elemento de forma absoluta */
+    left: 0;
+    /* Alinea el pseudo-elemento a la izquierda */
+    bottom: -2px;
+    /* Coloca el pseudo-elemento debajo del texto */ }
+  nav .container-fluid .collapse ul .underline:hover::after {
+    width: 100%;
+    /* Expande el subrayado al 100% del ancho del enlace */ }
+  nav .container-fluid .collapse ul .underline .nav-link {
+    color: #034069; }
+    nav .container-fluid .collapse ul .underline .nav-link:hover {
+      color: #ff0066;
+      font-weight: bold; }
+
+nav .container-fluid .collapse ul .actual {
+  font-weight: bold;
+  color: #ff0066; }
 
 nav img {
   width: 300px; }
