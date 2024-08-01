@@ -1,19 +1,16 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-:root {
-  --c-familyfont: "poppins";
-  --c-color-a: #034069;
-  --c-color-titulos: #034069;
-  --c-color-border: #034069;
-  --c-color-p: gray;
-  --c-color-hover: #ff0066;
-  --c-color-background: #ff0066;
-  --c-color-btn: #034069;
-  --c-font-size: 1rem;
-  --c-font-weight: ;
-  --c-padding-a: 1rem; }
+/*Lista*/
+/*Variable*/
+/*MAP*/
+/*EXTEND*/
+.flex-center, section .container-de-localidades, section .container-de-localidades .container-de-localidad, footer .container-data-uno {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
 
-/*VARIABLES GLOBALES*/
+/*MIXIN*/
 * {
   margin: 0;
   padding: 0;
@@ -25,28 +22,89 @@ ul {
 
 body {
   background-color: #f8f9fa;
-  position: relative; }
+  position: relative;
+  display: flex;
+  flex-direction: column; }
 
-/*BOOTSTRAP*/
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
+header,
+section,
+footer {
+  flex: 0 0 auto; }
+
+section {
+  flex: 1 0 auto; }
+
+footer {
+  flex-shrink: 0;
+  margin-top: auto; }
+
+/*Componente comun a todas las paginas*/
+.encabezados {
+  text-align: center; }
+  .encabezados .pag-titulo {
+    color: #034069;
+    font-size: 2em;
+    margin: 12px 0;
+    font-weight: bold;
+    font-size: 1.5em; }
+  .encabezados .pag-parrafo {
+    color: gray;
+    font-size: 16px;
+    margin: 10px 0;
+    line-height: 1.5;
+    padding-left: 24px;
+    padding-right: 24px; }
+
+/*MODIFICACIONES A LOS COMPONENTES DE BOOTSTRAP*/
 /*NAV*/
-nav img {
-  width: 300px; }
-
-nav .nav-link {
+nav .container-fluid .collapse ul .underline {
+  position: relative;
   font-size: 1rem;
   color: #034069;
   text-transform: uppercase; }
-  nav .nav-link:hover {
-    color: #ff0066; }
+  nav .container-fluid .collapse ul .underline::after {
+    content: '';
+    /* Crea un contenido vacío */
+    display: block;
+    /* Convierte el pseudo-elemento en un bloque */
+    width: 0;
+    /* Ancho inicial del subrayado */
+    height: 4px;
+    /* Altura del subrayado */
+    background: #034069;
+    /* Color del subrayado */
+    transition: width 0.3s;
+    /* Transición suave para el efecto de subrayado */
+    position: absolute;
+    /* Posiciona el pseudo-elemento de forma absoluta */
+    left: 0;
+    /* Alinea el pseudo-elemento a la izquierda */
+    bottom: -2px;
+    /* Coloca el pseudo-elemento debajo del texto */ }
+  nav .container-fluid .collapse ul .underline:hover::after {
+    width: 100%;
+    /* Expande el subrayado al 100% del ancho del enlace */ }
+  nav .container-fluid .collapse ul .underline .nav-link:hover {
+    color: #ff0066;
+    font-weight: bold; }
+
+nav .container-fluid .collapse ul .actual {
+  font-weight: bold;
+  color: #ff0066; }
+
+nav img {
+  width: 300px; }
 
 nav .nav-icono-contenedor {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center; }
+  flex-direction: row; }
   nav .nav-icono-contenedor .nav-icono {
     list-style: none;
-    padding-right: 1rem;
     padding-left: 1rem;
     font-size: 1.5rem;
     color: #034069; }
@@ -59,7 +117,37 @@ nav .nav-icono-contenedor {
   padding-right: 2rem;
   padding-bottom: 24px; }
   .cards-section .c-card {
-    border: #034069 solid; }
+    border: #034069, solid;
+    border-radius: 16px;
+    background-color: white;
+    overflow: hidden; }
+
+/*MODAL HOSPEDAJES y PUEBLOS*/
+.modal .modal-dialog .modal-content .modal-header h5 {
+  color: #034069;
+  font-size: 2em;
+  margin: 12px 0;
+  font-weight: bold;
+  font-size: 1.4em; }
+
+.modal .modal-dialog .modal-content .modal-body .hotel h3,
+.modal .modal-dialog .modal-content .modal-body .pueblos h3 {
+  color: #034069;
+  font-size: 2em;
+  margin: 12px 0;
+  font-weight: bold;
+  font-size: 1.2em; }
+
+.modal .modal-dialog .modal-content .modal-body .hotel p,
+.modal .modal-dialog .modal-content .modal-body .pueblos p {
+  color: gray;
+  font-size: 16px;
+  margin: 10px 0;
+  line-height: 1.5; }
+
+.modal .modal-dialog .modal-content .modal-body .hotel ul li::marker,
+.modal .modal-dialog .modal-content .modal-body .pueblos ul li::marker {
+  color: #034069; }
 
 /*CARDS GASTRONOMIA*/
 .gastronomia-container {
@@ -67,195 +155,16 @@ nav .nav-icono-contenedor {
   padding-right: 24px;
   padding-bottom: 24px; }
   .gastronomia-container .row .col .card {
-    border: #034069 solid; }
+    border: #034069, solid;
+    border-radius: 16px;
+    background-color: white;
+    overflow: hidden; }
     .gastronomia-container .row .col .card .card-body .gastronomia {
       list-style: none; }
       .gastronomia-container .row .col .card .card-body .gastronomia .card-title {
         color: #034069; }
       .gastronomia-container .row .col .card .card-body .gastronomia p {
         color: gray; }
-
-.encabezados {
-  text-align: center; }
-  .encabezados .pag-titulo {
-    color: #034069;
-    padding-top: 24px; }
-  .encabezados .pag-parrafo {
-    color: gray;
-    padding-left: 24px;
-    padding-right: 24px; }
-
-/*CARDS HOME*/
-.card-display {
-  display: grid;
-  grid-template-areas: "a-uno b-uno c-uno" "a-dos b-dos c-dos";
-  padding: 0 16px 24px 16px; }
-  .card-display .card-container {
-    display: flex;
-    flex: 0 0 25%;
-    margin: 1rem;
-    align-items: baseline;
-    height: 200px;
-    position: relative;
-    border: #034069 solid;
-    border-radius: 16px;
-    background-color: white; }
-    .card-display .card-container div i {
-      font-size: 1.5rem;
-      padding: 1rem;
-      color: #ff0066; }
-    .card-display .card-container .card-data h3 {
-      color: #034069;
-      padding-bottom: 16px; }
-    .card-display .card-container .card-data p {
-      color: gray;
-      padding-right: 24px; }
-    .card-display .card-container .card-data a {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      padding-right: 24px;
-      padding-bottom: 24px;
-      text-decoration: none;
-      color: #034069; }
-      .card-display .card-container .card-data a:hover {
-        color: #ff0066; }
-
-/*MAPA*/
-/*HOSPEDAJES*/
-.localidades-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 24px; }
-  .localidades-container .localidades {
-    width: 90%;
-    margin: 20px;
-    padding: 20px;
-    background-color: #fff;
-    border: var(--c-color-border) solid;
-    border-radius: 16px; }
-    .localidades-container .localidades .localidad {
-      margin-bottom: 20px; }
-      .localidades-container .localidades .localidad input[type="checkbox"] {
-        display: none; }
-        .localidades-container .localidades .localidad input[type="checkbox"]:checked + .localidad-label + ul {
-          display: block; }
-      .localidades-container .localidades .localidad .localidad-label {
-        display: block;
-        padding: 10px;
-        cursor: pointer;
-        font-size: 1.2rem;
-        font-weight: bold;
-        color: #034069;
-        background-color: #f0f0f0;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        transition: background-color 0.3s, color 0.3s; }
-      .localidades-container .localidades .localidad ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        display: none; }
-        .localidades-container .localidades .localidad ul li {
-          padding: 10px;
-          border-bottom: 1px solid #ccc; }
-          .localidades-container .localidades .localidad ul li h3 {
-            margin-top: 0;
-            margin-bottom: 5px; }
-          .localidades-container .localidades .localidad ul li p {
-            margin: 5px 0;
-            font-size: 0.9em;
-            color: #666; }
-
-/*CONTACTO*/
-.form-container {
-  width: 500px;
-  background-color: #fff;
-  padding: 20px;
-  border: #034069 solid;
-  border-radius: 16px;
-  box-sizing: border-box;
-  font-family: 'poppins';
-  color: #034069;
-  margin-bottom: 24px; }
-  .form-container h2 {
-    margin-bottom: 20px;
-    text-align: center; }
-  .form-container form .form-item {
-    margin-bottom: 20px; }
-    .form-container form .form-item label {
-      display: flex;
-      margin-bottom: 5px; }
-    .form-container form .form-item input, .form-container form .form-item textarea {
-      width: 100%;
-      padding: 10px;
-      border: var(--c-color-border) solid;
-      border-radius: 12px;
-      box-sizing: border-box; }
-  .form-container form button {
-    background-color: #034069;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: 'poppins'; }
-    .form-container form button:hover {
-      background-color: var(--c-color-hover); }
-
-/*FOOTER*/
-footer {
-  display: grid;
-  border-radius: 24px 24px 0px 0px;
-  font-size: 12px;
-  padding: 24px;
-  background: #034069;
-  grid-template-areas: "logo data";
-  justify-content: space-around; }
-  footer .logo-footer img {
-    width: 300px;
-    height: auto; }
-  footer .container-data-uno {
-    display: flex;
-    flex-direction: column;
-    padding-left: 12px;
-    padding-right: 12px; }
-    footer .container-data-uno div h3 {
-      color: white;
-      font-size: 16px;
-      padding: 16px;
-      margin: 0; }
-    footer .container-data-uno div .footer-hr {
-      margin: 0;
-      color: inherit;
-      border: 0;
-      border-top: solid;
-      opacity: .25;
-      border-color: white; }
-  footer .container-data-dos {
-    display: flex;
-    margin-right: 8rem; }
-    footer .container-data-dos div h3 {
-      padding: 12px;
-      margin: 0; }
-    footer .container-data-dos div p {
-      color: white;
-      margin-block-start: 0em;
-      margin-block-end: 0em;
-      padding: 0 12px 12px 12px; }
-    footer .container-data-dos .container-derecho {
-      padding-left: 24px; }
-      footer .container-data-dos .container-derecho div ul {
-        display: flex;
-        list-style: none; }
-        footer .container-data-dos .container-derecho div ul li a {
-          color: white;
-          font-size: 1.5rem;
-          padding: 0 1rem 1rem 1rem; }
-          footer .container-data-dos .container-derecho div ul li a:hover {
-            color: #ff0066; }
 
 /*MEDIAQUERIES*/
 @media screen and (max-width: 1210px) {
@@ -353,6 +262,7 @@ footer {
   .form-container {
     width: 345px; } }
 
+/*HOME*/
 /*TEXTO PRINCIPAL*/
 main {
   display: flex;
@@ -363,15 +273,244 @@ main {
   align-items: center;
   text-align: center; }
   main h1 {
-    color: var(--c-color-titulos);
+    color: #034069;
+    font-size: 2em;
+    margin: 12px 0;
+    font-weight: bold;
     padding-bottom: 24px;
     padding-top: 24px; }
   main p {
-    color: var(--c-color-p);
+    color: gray;
+    font-size: 16px;
+    margin: 10px 0;
+    line-height: 1.5;
     width: 80%; }
   main hr {
-    border-color: var(--c-color-a);
+    border-color: #034069;
     width: 50%;
     margin: 24px; }
 
-/*TARJETAS DE HOME*/
+/*__CARDS HOME*/
+.card-display {
+  display: grid;
+  grid-template-areas: "a-uno b-uno c-uno" "a-dos b-dos c-dos";
+  padding: 0 16px 24px 16px; }
+  .card-display .card-container {
+    display: flex;
+    flex: 0 0 25%;
+    margin: 1rem;
+    align-items: baseline;
+    height: 200px;
+    position: relative;
+    border: #034069, solid;
+    border-radius: 16px;
+    background-color: white; }
+    .card-display .card-container:hover {
+      border: #ff0066, solid; }
+  .card-display div i {
+    font-size: 1.5rem;
+    padding: 1rem;
+    color: #ff0066; }
+  .card-display .card-data h3 {
+    color: #034069;
+    font-size: 2em;
+    margin: 12px 0;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding-bottom: 16px; }
+  .card-display .card-data p {
+    color: gray;
+    font-size: 16px;
+    margin: 10px 0;
+    line-height: 1.5;
+    padding-right: 24px; }
+  .card-display .card-data a {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding-right: 24px;
+    padding-bottom: 24px;
+    text-decoration: none;
+    color: #034069; }
+    .card-display .card-data a:hover {
+      color: #ff0066;
+      font-weight: bold; }
+
+/*HOSPEDAJES*/
+section .container-de-localidades {
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: 24px; }
+  section .container-de-localidades .container-de-localidad {
+    /*flex: 1 1 33%;*/
+    width: 300px;
+    height: 200px;
+    flex-direction: row;
+    /*padding: 16px;*/
+    background-color: #034069;
+    margin: 5px;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.5s ease; }
+    section .container-de-localidades .container-de-localidad:hover .overlay {
+      animation: slide-in 0.5s forwards, slide-out 0.5s 2s forwards; }
+    section .container-de-localidades .container-de-localidad:hover {
+      animation: change-bg 0.5s 2.5s forwards;
+      /* Retrasa el cambio de fondo hasta que la imagen se haya retirado */ }
+    section .container-de-localidades .container-de-localidad:hover {
+      background-color: #ff0066; }
+      section .container-de-localidades .container-de-localidad:hover:hover h3 {
+        color: white;
+        font-size: 2em;
+        position: relative;
+        z-index: 2; }
+      section .container-de-localidades .container-de-localidad:hover:hover .overlay {
+        animation: slide-in 0.5s forwards, slide-out 0.5s 2s forwards; }
+    section .container-de-localidades .container-de-localidad .container-info {
+      position: relative;
+      z-index: 2; }
+      section .container-de-localidades .container-de-localidad .container-info h3 {
+        color: #034069;
+        font-size: 2em;
+        margin: 12px 0;
+        font-weight: bold;
+        display: block;
+        color: white;
+        font-size: 1.3em;
+        transition: color 0.5s ease, font-size 0.5s ease; }
+  section .container-de-localidades .overlay {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    opacity: 0.5;
+    /* Ajusta la opacidad de la imagen */
+    z-index: 1; }
+
+@keyframes slide-in {
+  from {
+    left: -100%; }
+  to {
+    left: 0; } }
+
+@keyframes slide-out {
+  from {
+    left: 0; }
+  to {
+    left: 100%; } }
+
+@keyframes change-bg {
+  to {
+    background-color: #ff0066;
+    /* Nuevo color de fondo */ } }
+
+/*__FORMULARIO CONTACTO*/
+.form-container {
+  width: 500px;
+  border: #034069, solid;
+  border-radius: 16px;
+  background-color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: "poppins";
+  color: #034069;
+  margin-bottom: 24px; }
+  .form-container h2 {
+    color: #034069;
+    font-size: 2em;
+    margin: 12px 0;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-align: center; }
+    .form-container h2 i {
+      color: #ff0066; }
+  .form-container form .form-item {
+    margin-bottom: 20px; }
+    .form-container form .form-item label {
+      display: flex;
+      margin-bottom: 5px; }
+    .form-container form .form-item input,
+    .form-container form .form-item textarea {
+      width: 100%;
+      padding: 10px;
+      border: #034069, solid;
+      border-radius: 12px;
+      box-sizing: border-box; }
+  .form-container form button {
+    background-color: #034069;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'poppins'; }
+    .form-container form button:hover {
+      background-color: #ff0066; }
+
+/*__FOOTER*/
+footer {
+  display: grid;
+  border-radius: 24px 24px 0px 0px;
+  font-size: 12px;
+  padding: 24px;
+  background: #034069;
+  grid-template-areas: "logo data";
+  justify-content: space-around; }
+  footer .logo-footer img {
+    width: 300px;
+    height: auto; }
+  footer .container-data-uno {
+    align-items: start;
+    padding-left: 12px;
+    padding-right: 12px; }
+    footer .container-data-uno div h3 {
+      color: #034069;
+      font-size: 2em;
+      margin: 12px 0;
+      font-weight: bold;
+      color: white;
+      font-size: 1.3em;
+      padding: 16px;
+      margin: 0; }
+    footer .container-data-uno div .footer-hr {
+      margin: 0;
+      border: 0;
+      border-top: solid;
+      border-color: white; }
+  footer .container-data-dos {
+    display: flex;
+    margin-right: 8rem; }
+    footer .container-data-dos div h3 {
+      color: #034069;
+      font-size: 2em;
+      margin: 12px 0;
+      font-weight: bold;
+      color: white;
+      font-size: 1em;
+      padding: 12px;
+      margin: 0; }
+    footer .container-data-dos div p {
+      color: gray;
+      font-size: 16px;
+      margin: 10px 0;
+      line-height: 1.5;
+      color: white;
+      font-size: 1em;
+      margin-block-start: 0em;
+      margin-block-end: 0em;
+      padding: 0 12px 12px 12px; }
+    footer .container-data-dos .container-derecho {
+      padding-left: 24px; }
+      footer .container-data-dos .container-derecho div ul {
+        display: flex;
+        list-style: none; }
+        footer .container-data-dos .container-derecho div ul li a {
+          color: white;
+          font-size: 2em;
+          padding: 0 0.8em 0 0; }
+          footer .container-data-dos .container-derecho div ul li a:hover {
+            color: #ff0066; }

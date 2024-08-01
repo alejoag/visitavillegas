@@ -3,7 +3,7 @@ footer {
     border-radius: 24px 24px 0px 0px;
     font-size: 12px;
     padding: 24px;
-    background: $c-color-b-footer;
+    background: nth($colores, 1);
     grid-template-areas: "logo data";
     justify-content: space-around;
 
@@ -15,26 +15,25 @@ footer {
     }
 
     .container-data-uno {
-        display: flex;
-        flex-direction: column;
+        @extend .flex-center;
+        align-items: start;
         padding-left: 12px;
         padding-right: 12px;
 
         div {
             h3 {
-                color: $c-color-titulos-l;
-                font-size: 16px;
+                @include estilo-titulos;
+                color: nth($colores, 3);
+                font-size: 1.3em;
                 padding: 16px;
                 margin: 0;
             }
 
             .footer-hr {
                 margin: 0;
-                color: inherit;
                 border: 0;
                 border-top: solid;
-                opacity: .25;
-                border-color: white;
+                border-color: nth($colores, 3);
             }
         }
     }
@@ -45,12 +44,17 @@ footer {
 
         div {
             h3 {
+                @include estilo-titulos;
+                color: nth($colores, 3);
+                font-size: 1em;
                 padding: 12px;
                 margin: 0;
             }
 
             p {
-                color: $c-color-p-l;
+                @include estilo-parrafo;
+                color: nth($colores, 3);
+                font-size: 1em;
                 margin-block-start: 0em;
                 margin-block-end: 0em;
                 padding: 0 12px 12px 12px;
@@ -59,6 +63,7 @@ footer {
 
         .container-derecho {
             padding-left: 24px;
+
             div {
                 ul {
                     display: flex;
@@ -66,11 +71,12 @@ footer {
 
                     li {
                         a {
-                            color: $c-color-a-l;
-                            font-size: 1.5rem;
-                            padding: 0 1rem 1rem 1rem;
-                            &:hover{
-                                color: $c-color-hover;
+                            color: nth($colores, 3);
+                            font-size: 2em;
+                            padding: 0 0.8em 0 0;
+
+                            &:hover {
+                                color: nth($colores, 4);
                             }
                         }
                     }

@@ -1,41 +1,18 @@
 @import "./base/generales";
-@import "./componentes/header";
-/*CARDS HOME*/
-@import "./componentes/cards-home";
-/*MAPA*/
-@import "./componentes/mapas";
-/*HOSPEDAJES*/
-@import "./componentes/hospedajes";
-/*CONTACTO*/
-@import "./componentes/form-contacto";
-/*FOOTER*/
-@import "./componentes/footer";
 /*MEDIAQUERIES*/
 @import "./base/mediaqueries";
+/*HOME*/
+@import "./componentes/home";
+/*__CARDS HOME*/
+@import "./componentes/cards-home";
+/*HOSPEDAJES*/
+@import "./componentes/hospedajes";
+/*__FORMULARIO CONTACTO*/
+@import "./componentes/form-contacto";
+/*__FOOTER*/
+@import "./componentes/footer";
 
-/*TEXTO PRINCIPAL*/
-main{
-    display: flex;
-    flex-direction: column;
-    padding-left: 24px;
-    padding-right: 24px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    h1{
-        color: var(--c-color-titulos);
-        padding-bottom: 24px;
-        padding-top: 24px;
-    }
-    p{
-        color: var(--c-color-p);
-        width: 80%;
-    }
-    hr{
-        border-color: var(--c-color-a);
-        width: 50%;
-        margin: 24px;
-    }
-}
-/*TARJETAS DE HOME*/
+
+
+
 

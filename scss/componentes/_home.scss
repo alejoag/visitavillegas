@@ -1,0 +1,24 @@
+/*TEXTO PRINCIPAL*/
+main{
+    display: flex;
+    flex-direction: column;
+    padding-left: 24px;
+    padding-right: 24px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    h1{
+        @include estilo-titulos;
+        padding-bottom: 24px;
+        padding-top: 24px;
+    }
+    p{
+        @include estilo-parrafo;
+        width: 80%;
+    }
+    hr{
+        border-color: nth($colores, 1);
+        width: 50%;
+        margin: 24px;
+    }
+}

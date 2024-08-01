@@ -1,37 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-:root {
-    --c-familyfont: "poppins";
-    --c-color-a: #034069;
-    --c-color-titulos: #034069;
-    --c-color-border: #034069;
-    --c-color-p: gray;
-    --c-color-hover: #ff0066;
-    --c-color-background: #ff0066;
-    --c-color-btn: #034069;
-    --c-font-size: 1rem;
-    --c-font-weight: ;
-    --c-padding-a: 1rem;
-}
-/*VARIABLES GLOBALES*/
+
+/*Lista*/
+$colores: #034069, gray, white, #ff0066, #f8f9fa;
+
+/*Variable*/
 $c-familyfont: "poppins";
-$c-color-a: #034069;
-$c-color-titulos: #034069;
-$c-color-p: gray;
-$c-color-a-l: white;
-$c-color-titulos-l: white;
-$c-color-p-l: white;
-$c-color-hover: #ff0066;
+$borde: nth($colores, 1), solid;
 $c-font-size: 1rem;
 $c-padding-a: 1rem;
-$c-color-border: #034069;
-$c-color-acento: #ff0066; 
-$c-color-background: #f8f9fa;
-$c-color-b-item: white;
-$c-color-b-footer: #034069;
-$c-color-btn: #034069;
 
+/*MAP*/
+$cards: (
+    borde: $borde,
+    redondez: 16px,
+    color-fondo: nth($colores, 3),
+);
 
+/*EXTEND*/
+.flex-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*MIXIN*/
+@mixin estilo-titulos($color: nth($colores, 1), $font-size: 2em, $margin: 12px 0, $font-weight: bold) {
+    color: $color;
+    font-size: $font-size;
+    margin: $margin;
+    font-weight: $font-weight;
+}
+
+@mixin estilo-parrafo($color: nth($colores, 2), $size: 16px, $margin: 10px 0) {
+    color: $color;
+    font-size: $size;
+    margin: $margin;
+    line-height: 1.5;
+}
 
 
 * {
@@ -39,48 +46,121 @@ $c-color-btn: #034069;
     padding: 0;
     box-sizing: border-box;
 }
-
 body,
 ul {
     font-family: $c-familyfont;
 }
-
 body {
-    background-color: $c-color-background;
+    background-color: nth($colores, 5);
     position: relative;
+    display: flex;
+    flex-direction: column;
+}
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+header,
+section,
+footer {
+    flex: 0 0 auto;
+}
+section {
+    flex: 1 0 auto;
+}
+footer {
+    flex-shrink: 0;
+    margin-top: auto;
+}
+/*Componente comun a todas las paginas*/
+.encabezados {
+    text-align: center;
+
+    .pag-titulo {
+        @include estilo-titulos;
+        font-size: 1.5em;
+    }
+
+    .pag-parrafo {
+        @include estilo-parrafo;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
 }
 
-/*BOOTSTRAP*/
+/*MODIFICACIONES A LOS COMPONENTES DE BOOTSTRAP*/
 
 /*NAV*/
 nav {
+    .container-fluid {
+        .collapse {
+            ul {
+                .underline {
+                    position: relative;
+                    font-size: $c-font-size;
+                    color: nth($colores, 1);
+                    text-transform: uppercase;
+
+                    &::after {
+                        content: '';
+                        /* Crea un contenido vacío */
+                        display: block;
+                        /* Convierte el pseudo-elemento en un bloque */
+                        width: 0;
+                        /* Ancho inicial del subrayado */
+                        height: 4px;
+                        /* Altura del subrayado */
+                        background: nth($colores, 1);
+                        /* Color del subrayado */
+                        transition: width 0.3s;
+                        /* Transición suave para el efecto de subrayado */
+                        position: absolute;
+                        /* Posiciona el pseudo-elemento de forma absoluta */
+                        left: 0;
+                        /* Alinea el pseudo-elemento a la izquierda */
+                        bottom: -2px;
+                        /* Coloca el pseudo-elemento debajo del texto */
+                    }
+
+                    &:hover::after {
+                        width: 100%;
+                        /* Expande el subrayado al 100% del ancho del enlace */
+                    }
+
+                    .nav-link {
+                        &:hover {
+                            color: nth($colores, 4);
+                            font-weight: bold;
+                        }
+                    }
+                }
+
+                .actual {
+                    font-weight: bold;
+                    color: nth($colores, 4);
+                }
+            }
+        }
+    }
+
     img {
         width: 300px;
     }
 
-    .nav-link {
-        font-size: $c-font-size;
-        color: $c-color-a;
-        text-transform: uppercase;
-        &:hover {
-            color: $c-color-hover;
-        }
-    }
-
     .nav-icono-contenedor {
-        display: flex;
         flex-direction: row;
-        justify-content: center;
-        align-items: center;
+
 
         .nav-icono {
             list-style: none;
-            padding-right: 1rem;
             padding-left: 1rem;
             font-size: 1.5rem;
-            color: $c-color-a;
-            &:hover{
-                color: $c-color-hover;
+            color: nth($colores, 1);
+
+            &:hover {
+                color: nth($colores, 4)
             }
         }
     }
@@ -93,7 +173,45 @@ nav {
     padding-bottom: 24px;
 
     .c-card {
-        border: $c-color-border solid;
+        border: map-get($cards, borde);
+        border-radius: map-get($cards , redondez);
+        background-color: map-get($cards, color-fondo);
+        overflow: hidden;
+    }
+}
+
+/*MODAL HOSPEDAJES y PUEBLOS*/
+.modal {
+    .modal-dialog {
+        .modal-content {
+            .modal-header {
+                h5 {
+                    @include estilo-titulos;
+                    font-size: 1.4em;
+                }
+            }
+
+            .modal-body {
+
+                .hotel,
+                .pueblos {
+                    h3 {
+                        @include estilo-titulos;
+                        font-size: 1.2em;
+                    }
+
+                    p {
+                        @include estilo-parrafo;
+                    }
+
+                    ul {
+                        li::marker {
+                            color: nth($colores, 1)
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -106,40 +224,25 @@ nav {
     .row {
         .col {
             .card {
-                border: $c-color-border solid;
+                border: map-get($cards, borde);
+                border-radius: map-get($cards , redondez);
+                background-color: map-get($cards, color-fondo);
+                overflow: hidden;
 
                 .card-body {
                     .gastronomia {
                         list-style: none;
 
                         .card-title {
-                            color: $c-color-a;
+                            color: nth($colores, 1);
                         }
 
                         p {
-                            color: $c-color-p;
+                            color: nth($colores, 2);
                         }
                     }
                 }
             }
         }
-    }
-}
-
-
-
-
-.encabezados {
-    text-align: center;
-
-    .pag-titulo {
-        color: $c-color-titulos;
-        padding-top: 24px;
-    }
-
-    .pag-parrafo {
-        color: $c-color-p;
-        padding-left: 24px;
-        padding-right: 24px;
     }
 }

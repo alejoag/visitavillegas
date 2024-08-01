@@ -12,41 +12,47 @@
         align-items: baseline;
         height: 200px;
         position: relative;
-        border: $c-color-border solid;
-        border-radius: 16px;
-        background-color: $c-color-b-item;
+        border: map-get($cards, borde);
+        border-radius: map-get($cards , redondez);
+        background-color: map-get($cards, color-fondo);
 
-        div {
-            i {
-                font-size: 1.5rem;
-                padding: 1rem;
-                color: $c-color-acento;
-            }
+        &:hover {
+            border: nth($colores, 4), solid;
+        }
+    }
+
+    div {
+        i {
+            font-size: 1.5rem;
+            padding: 1rem;
+            color: nth($colores, 4);
+        }
+    }
+
+    .card-data {
+        h3 {
+            @include estilo-titulos;
+            font-size: 1.2em;
+            padding-bottom: 16px;
         }
 
-        .card-data {
-            h3 {
-                color: $c-color-titulos;
-                padding-bottom: 16px;
-            }
+        p {
+            @include estilo-parrafo;
+            padding-right: 24px;
+        }
 
-            p {
-                color: $c-color-p;
-                padding-right: 24px;
-            }
+        a {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            padding-right: 24px;
+            padding-bottom: 24px;
+            text-decoration: none;
+            color: nth($colores, 1);
 
-            a {
-                position: absolute;
-                right: 0;
-                bottom: 0;
-                padding-right: 24px;
-                padding-bottom: 24px;
-                text-decoration: none;
-                color: $c-color-a;
-
-                &:hover {
-                    color: $c-color-hover;
-                }
+            &:hover {
+                color: nth($colores, 4);
+                font-weight: bold;
             }
         }
     }
