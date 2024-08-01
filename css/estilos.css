@@ -515,3 +515,7 @@ footer {
 @media screen and (max-width: 400px) {
   .form-container {
     width: 345px; } }
+
+@media screen and (max-width: 440px) {
+  nav img {
+    width: 250px; } }
