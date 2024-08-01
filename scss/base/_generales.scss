@@ -96,7 +96,8 @@ footer {
 nav {
     .container-fluid {
         .collapse {
-            ul {
+            color: nth($colores, 1);
+            ul { 
                 .underline {
                     position: relative;
                     font-size: $c-font-size;
@@ -130,6 +131,7 @@ nav {
                     }
 
                     .nav-link {
+                        color: nth($colores, 1);
                         &:hover {
                             color: nth($colores, 4);
                             font-weight: bold;
