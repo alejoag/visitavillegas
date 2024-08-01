@@ -1,6 +1,5 @@
 @import "./base/generales";
-/*MEDIAQUERIES*/
-@import "./base/mediaqueries";
+
 /*HOME*/
 @import "./componentes/home";
 /*__CARDS HOME*/
@@ -11,7 +10,8 @@
 @import "./componentes/form-contacto";
 /*__FOOTER*/
 @import "./componentes/footer";
-
+/*MEDIAQUERIES*/
+@import "./base/mediaqueries";
 
 
 
