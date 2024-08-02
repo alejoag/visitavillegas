@@ -25,6 +25,8 @@
 </head>
 
 <body>
+    
+
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
@@ -60,106 +62,133 @@
         <h1 class="pag-titulo">Actividades</h1>
         <p class="pag-parrafo">Oferta de actividades deportivas y culturales para disfrutar del tiempo libre.</p>
     </section>
-    <section class="cards-section">
-        <div class="row row-cols-1 row-cols-xl-3 row-cols-md-2 g-4">
-            <div class="col ">
-                <div class="card c-card">
-                    <img src="../img/puig.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Circuito Manuel Puig</h5>
-                        <p class="card-text">Recorrido por las calle y lugares de General Villegas que forjaron a este escritor de fama internacional.</p>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Dirección: Moreno 846</li>
-                            <li class="list-group-item">Días y horarios: lun a vie de 7 a 19hs</li>
-                            <li class="list-group-item">Contacto: 03388 15509161</li>
-                        </ul>
-                    </div>
 
+    <section>
+        <div class="container-de-localidades">
+            <div class="container-de-localidad" data-bs-toggle="modal" data-bs-target="#deportes">
+                <div class="container-info">
+                    <h3>Deporte</h3>
                 </div>
+                <div class="overlay" style="background: url('../img/deporte.jpg') no-repeat center center; background-size: cover; "></div>
             </div>
-
-            <div class="col ">
-                <div class="card c-card">
-                    <img src="../img/kayak.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">"La Botera"</h5>
-                        <p class="card-text">Si te apasionan los deportes acuaticos, visita La Botera y disfruta de una tarde de remo.</p>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Dirección: Parque Municipal</li>
-                            <li class="list-group-item">Días y horarios: consultar</li>
-                            <li class="list-group-item">Contacto: 03388 15455798</li>
-                        </ul>
-                    </div>
-
+    
+            <div class="container-de-localidad" data-bs-toggle="modal" data-bs-target="#cultura">
+                <div class="container-info">
+                    <h3>Cultura</h3>
                 </div>
-            </div>
-
-            <div class="col ">
-                <div class="card c-card">
-                    <img src="../img/parque.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Balneario Municipal "Aldo Rodríguez Orozco"</h5>
-                        <p class="card-text">En verano te esperamos en la pileta.</p>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Dirección: Parque Municipal</li>
-                            <li class="list-group-item">Días y horarios: Todos los dias de 13 a 19hs</li>
-                            <li class="list-group-item">Contacto: 03388 15509161</li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col ">
-                <div class="card c-card">
-                    <img src="../img/alonso.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Museo Carlos Alonso</h5>
-                        <p class="card-text">Visitá la muestra permanente "La Guerra al Malon" del artista plástico Carlos Alonso.</p>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Dirección: Moreno y Pringles</li>
-                            <li class="list-group-item">Días y horarios: mier a dom 16 a 19hs</li>
-                            <li class="list-group-item">Contacto: 03388 15411034</li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col ">
-                <div class="card c-card">
-                    <img src="../img/camping.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Camping municipal</h5>
-                        <p class="card-text">Pasa un tiempo en la naturaleza y disfruta de los atractivos del parque municipal local.</p>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Dirección: Parque Municipal</li>
-                            <li class="list-group-item">Días y horarios: las 24hs</li>
-                            <li class="list-group-item">Contacto: 03388 15509161</li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col ">
-                <div class="card c-card">
-                    <img src="../img/mhr.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Museo Histórico Regional</h5>
-                        <p class="card-text">Conocé el patrimonio histórico de la comunidad de Villegas.</p>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Dirección: Predio del ferrocarril</li>
-                            <li class="list-group-item">Días y horarios: lun a dom de 10 a 19hs</li>
-                            <li class="list-group-item">Contacto: 03388 15509161</li>
-                        </ul>
-                    </div>
-
-                </div>
+                <div class="overlay" style="background: url('../img/cultura.jpg') no-repeat center center; background-size: cover; "></div>
             </div>
         </div>
-
     </section>
+
+<!-- Modal deportes -->
+<div class="modal fade" id="deportes" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Turismo deportivo y de la naturaleza</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="hotel">
+                    <h3>Parque Municipal</h3>
+                    <p>Para los amantes de la naturaleza, el deporte y las actividades al aire libre, la ciudad cuenta con el extenso Parque Municipal que abarca 40 hectáreas, de los cuales el 40% se encuentra forestada con eucaliptos y otros ejemplares muy añejos, en el que se realizan diferentes eventos deportivos durante todo el año. Su corazón es un lago artificial donde se puede realizar Kayac recreativo y competitivo, y pesca de pejerrey. Cuenta con parrillas, zona de camping y juegos infantiles. También se encuentra un campo de doma y destrezas criollas donde se realizan los clásicos eventos del 25 de mayo, 9 de julio y el Dia de la Tradición.
+                        El Polideportivo Municipal (3500m2 cubiertos), también en el parque, forma parte de una pequeña villa olímpica que incluye canchas de vóley, básquet, futsal, handball, cestobal, hockey de césped sintético, padle, beach vóley, rugby, futbol 5, tenis de polvo de ladrillo, futbol playa y una pista de canotaje en la laguna.
+                        Por otro lado, Villegas cuenta con agrestes recorridos para practicar el ciclismo rural y carreras de aventura, ofreciendo una singular alternativa para conectarse con la naturaleza. El Camping Municipal ubicado dentro de este parque, permite disfrutar de los inigualables atardeceres que se pintan en el cielo de la llanura pampeana.
+                    <p><strong>Dirección: </strong>Mitre y Chassaing Este</p>
+                    <p><strong>Teléfono: </strong>03388 423623/423610</p>
+                    <div class="galeria">
+                        <img src="../img/modales/parque-modal.png" alt="Vista aerea del parque municipal, se ve la vegetación, laguna y pileta.">
+                        <img src="../img/modales/parque-modal-dos.png" alt="Vista terrestre de la isla del parque municipal y la laguna">
+                        <img src="../img/modales/parque-modal-tres.png" alt="Dos niños practicando canotaje en la laguna">
+                    </div>
+                    <hr>
+                </div>
+                <div class="hotel">
+                    <h3>Balneario Municipal "Aldo Rodriguez Orozco"</h3>
+                    <p>Emplazado dentro del Parque Municipal, el Balneario Municipal "Aldo Rodríguez Orozco" posee dos hermosas piletas de 70 metros por 80 metros cada una, divididas por un paseo parquizado y con una profundidad que va desde los 20 cm hasta los 4.5 m, con playa de arena.
+                        Se encuentra abierto los meses de diciembre, enero y febrero de lunes a domingos.
+                        Durante el mes de enero, de lunes a viernes, se desarrollan las Escuelas Abiertas de Verano de 10.00 a 13.00 hs.
+                        Asimismo, de lunes a viernes se brindan clases de natación gratuitas para adultos de 13.00 a 14.00hs.
+                        En el horario de 14.00 a 20.00hs. durante todos los días, se encuentra disponible para todo público abonando una entrada accesible.
+                        
+                    <p><strong>Dirección: </strong>Mitre y Chassaing Este</p>
+                    <p><strong>Teléfono: </strong>03388 456940</p>
+                    <p><strong>Correo electrónico: </strong>deportesgralvillegas@gmail.com</p>
+                    <div class="galeria">
+                        <img src="../img/modales/pileta-modal.png" alt="Gente sentada sobre el cesped a orillas de la pileta">
+                        <img src="../img/modales/pileta-modal-dos.png" alt="Gente metida dentro de la pileta">
+                        <img src="../img/modales/pileta-modal-tres.png" alt="Niños jugando en la arena a orilla de la pileta">
+                    </div>
+                    <hr>
+                </div>
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal cultura -->
+<div class="modal fade" id="cultura" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Turismo cultural</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="hotel">
+                    <h3>Circuito Manuel Puig</h3>
+                    <p>Un fascinante recorrido cultural por las calles y casas de "Coronel Vallejos".                      Manuel Puig nació el 28 de diciembre de 1932 en General Villegas, donde vivió hasta su adolescencia. Su padre era propietario de una vinería y su madre era bioquímica y trabajaba en el Hospital Municipal. Fue ella quien le transmitió su pasión por el cine. Con apenas cuatro años, solía acompañarla casi a diario al Cine Teatro Español a ver películas en inglés, italiano, francés y subtituladas en español, que tiempo después adquirieron una fuerte presencia en su obra literaria.
+                        En 1948 se mudó con su familia a Buenos Aires y en 1956 a Roma con una beca para estudiar Cine en Cinecittà. Tras su fracaso como guionista y asistente de dirección, Puig encontró su voz literaria en el relato de las historias familiares vividas en su pueblo natal, al que refirió en sus dos primeras novelas - La traición de Rita Hayworth y Boquitas pintadas - y denominó Coronel Vallejos, identificado claramente con General Villegas.
+                        Además de ocho novelas que fueron traducidas a varios idiomas, Puig escribió guiones cinematográficos, obras de teatro y relatos breves. Sus novelas Boquitas pintadas, El beso de la mujer araña y Pubis angelical, tuvieron relevancia mundial.
+                        Reconocido mundialmente, fue nominado en una oportunidad como candidato al premio Nobel y es hoy el símbolo de nuestra ciudad. Murió en México en 1990.
+                        En General Villegas se puede visitar el Circuito cultural Manuel Puig para recorrer en primera persona los lugares donde vivió y acerca de los que escribió el autor.</p>
+                    <p><strong>Dirección: </strong>Mitre y Chassaing Este</p>
+                    <p><strong>Teléfono: </strong>03388 423623/423610</p>
+                    <div class="galeria">
+                        <img src="../img/modales/puig-modal.png" alt="Uno de los carteles emplazados en el circuito junto a la plaza">
+                        <img src="../img/modales/puig-modal-dos.png" alt="Publicación de la revista Villegas Ilustrado">
+                    </div>
+                    <hr>
+                </div>
+                <div class="hotel">
+                    <h3>Museo Municipal de Bellas Artes "Carlos Alonso"</h3>
+                    <p>"La guerra al malón" según Carlos Alonso: una colección inédita patrimonio de nuestra ciudad
+                        En el año 1964, el reconocido artista Carlos Alonso recibe de la Editorial EUDEBA el ofrecimiento de ilustrar el libro "La guerra al malón" a partir de los relatos del Comandante Prado (1907). Para llevar a cabo su misión, Alonso decide instalarse por un tiempo en General Villegas y se hospeda en la casa de sus amigos Tito y Antonio Carrizo.
+                        Una vez inmerso en la zona y en contacto con el paisaje pampeano, encuentra inspiración para recrear ese hito histórico.
+                        Finalizada la obra, Alonso considera que la colección debiera permanecer en el lugar que la vio nacer. Por ese motivo, un grupo de vecinos decide comprarla y donarla para un futuro museo. Es así como nace el Museo Municipal de Bellas Artes.
+                        Hoy en día, el museo resguarda esta serie original de 45 pinturas (tintas, acuarelas y técnicas mixtas), que ilustran con crudeza y expresividad las luchas entre indios y criollos durante la campaña del desierto, junto a diversas obras de artistas como Antonio Berni, Juan Carlos Castagnino, Lino Enea Spilimbergo, Adolfo Bellocq, Juan carlos de la Mota y otros pintores contemporáneos.
+                        En el museo también se pueden realizar visitas guiadas y disfrutar de exposiciones itinerantes de artistas locales, jornadas de café concerts y eventos de música al aire libre. Asimismo, se organizan talleres de arte y pintura para la comunidad y visitas de centros educativos.
+                        Horario de invierno: miércoles a domingo de 16 a 19 hs. (Visita guiada a las 17 hs.)
+                        Horario de verano: miércoles a viernes de 9 a 12 hs. Sábados y domingos de 18 a 21 hs. (Visita guiada a las 19 hs.)
+                        
+                    </p>
+                    <p><strong>Dirección: </strong>Moreno y Pringles</p>
+                    <p><strong>Teléfono: </strong>03388 421204-15411034</p>
+                    <p><strong>Días y horarios: </strong>Horario de invierno: miércoles a domingo de 16 a 19 hs. (Visita guiada a las 17 hs.)
+                        Horario de verano: miércoles a viernes de 9 a 12 hs. Sábados y domingos de 18 a 21 hs. (Visita guiada a las 19 hs.)
+                        </p>
+                    <div class="galeria">
+                        <img src="../img/modales/alonso-modal.png" alt="Pinto Carlos Alonso mirando uno de sus cuadros">
+                        <img src="../img/modales/alonso-modal-dos.png" alt="Vista aerea del edificio del museo Carlos Alonso">
+                        <img src="../img/modales/alonso-modal-tres.png" alt="Estudiantes visitan el museo y ven la obra de Alonso">
+                    </div>
+                    <hr>
+                </div>
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
     <footer>
         <!--Logo de "Visitá Villegas" + redes sociales-->
         <div class="logo-footer">
