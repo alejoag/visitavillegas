@@ -9,16 +9,34 @@ main{
     text-align: center;
     h1{
         @include estilo-titulos;
-        padding-bottom: 24px;
-        padding-top: 24px;
+        padding-bottom: 16px;
+        padding-top: 16px;
+        margin: 8px 0 0 0;
     }
     p{
         @include estilo-parrafo;
         width: 80%;
+        margin: 0px;
+        padding-top: 8px;
+        margin-bottom: 8px;
     }
     hr{
         border-color: nth($colores, 1);
         width: 50%;
-        margin: 24px;
+        margin: 10px;
+    }
+}
+
+/* CAROUSEL */
+section{
+    .carousel{
+        .carousel-inner{
+            .carousel-item{
+                img{
+                    min-height: 250px; /* Altura mínima para pantallas grandes */
+                    object-fit: cover;
+                }
+            }
+        }
     }
 }

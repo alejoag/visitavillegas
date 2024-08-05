@@ -209,18 +209,28 @@ main {
     font-size: 2em;
     margin: 12px 0;
     font-weight: bold;
-    padding-bottom: 24px;
-    padding-top: 24px; }
+    padding-bottom: 16px;
+    padding-top: 16px;
+    margin: 8px 0 0 0; }
   main p {
     color: gray;
     font-size: 16px;
     margin: 10px 0;
     line-height: 1.5;
-    width: 80%; }
+    width: 80%;
+    margin: 0px;
+    padding-top: 8px;
+    margin-bottom: 8px; }
   main hr {
     border-color: #034069;
     width: 50%;
-    margin: 24px; }
+    margin: 10px; }
+
+/* CAROUSEL */
+section .carousel .carousel-inner .carousel-item img {
+  min-height: 250px;
+  /* Altura mínima para pantallas grandes */
+  object-fit: cover; }
 
 /*__CARDS HOME*/
 .card-display {
@@ -559,6 +569,11 @@ footer {
   main p {
     width: 100%; } }
 
+@media screen and (max-width: 768px) {
+  section .carousel .carousel-inner .carousel-item img {
+    min-height: 300px;
+    /* Ajusta la altura para pantallas medianas */ } }
+
 @media screen and (max-width: 740px) {
   .card-display {
     grid-template-areas: "a-uno" "b-uno" "c-uno" "a-dos" "b-dos" "c-dos"; } }
@@ -590,14 +605,22 @@ footer {
     align-items: baseline;
     padding: 0px; } }
 
-@media screen and (max-width: 432px) {
-  .container-data-uno {
-    padding-left: 24px; } }
+@media screen and (max-width: 576px) {
+  section .carousel .carousel-inner .carousel-item img {
+    min-height: 250px;
+    /* Ajusta la altura para pantallas pequeñas */ } }
 
-/*!---FORM - Cambio tamaño del formulario--*/
 @media screen and (max-width: 555px) {
   .form-container {
     width: 395px; } }
+
+@media screen and (max-width: 440px) {
+  nav img {
+    width: 250px; } }
+
+@media screen and (max-width: 432px) {
+  .container-data-uno {
+    padding-left: 24px; } }
 
 @media screen and (max-width: 405px) {
   footer .logo-footer img {
@@ -613,7 +636,3 @@ footer {
 @media screen and (max-width: 400px) {
   .form-container {
     width: 345px; } }
-
-@media screen and (max-width: 440px) {
-  nav img {
-    width: 250px; } }
