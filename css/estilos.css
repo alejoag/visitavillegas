@@ -5,7 +5,7 @@
 /*Variable*/
 /*MAP*/
 /*EXTEND*/
-.flex-center, section .container-de-localidades, section .container-de-localidades .container-de-localidad, footer .container-data-uno {
+.flex-center, section .container-btn-modales, section .container-btn-modales .container-btn-modal, section .container-de-gastronomia, section .container-de-gastronomia .container-btn-gastronomia, footer .container-data-uno {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,20 +47,31 @@ footer {
 
 /*Componente comun a todas las paginas*/
 .encabezados {
-  text-align: center; }
+  text-align: center;
+  background-size: cover;
+  /* Ajusta la imagen para que cubra toda la sección */
+  background-position: center;
+  /* Centra la imagen */
+  padding: 50px;
+  margin-bottom: 24px; }
   .encabezados .pag-titulo {
     color: #034069;
     font-size: 2em;
     margin: 12px 0;
     font-weight: bold;
-    font-size: 1.5em; }
+    font-size: 1.5em;
+    color: white; }
   .encabezados .pag-parrafo {
     color: gray;
     font-size: 16px;
     margin: 10px 0;
     line-height: 1.5;
     padding-left: 24px;
-    padding-right: 24px; }
+    padding-right: 24px;
+    color: white; }
+  .encabezados .sombra {
+    background-color: black;
+    z-index: 1; }
 
 /*MODIFICACIONES A LOS COMPONENTES DE BOOTSTRAP*/
 /*NAV*/
@@ -258,11 +269,11 @@ main {
       font-weight: bold; }
 
 /*HOSPEDAJES*/
-section .container-de-localidades {
+section .container-btn-modales {
   flex-direction: row;
   flex-wrap: wrap;
   padding-bottom: 24px; }
-  section .container-de-localidades .container-de-localidad {
+  section .container-btn-modales .container-btn-modal {
     /*flex: 1 1 33%;*/
     width: 300px;
     height: 200px;
@@ -274,24 +285,95 @@ section .container-de-localidades {
     position: relative;
     overflow: hidden;
     transition: background-color 0.5s ease; }
-    section .container-de-localidades .container-de-localidad:hover .overlay {
+    section .container-btn-modales .container-btn-modal:hover .overlay {
       animation: slide-in 0.5s forwards, slide-out 0.5s 2s forwards; }
-    section .container-de-localidades .container-de-localidad:hover {
+    section .container-btn-modales .container-btn-modal:hover {
       animation: change-bg 0.5s 2.5s forwards;
       /* Retrasa el cambio de fondo hasta que la imagen se haya retirado */ }
-    section .container-de-localidades .container-de-localidad:hover {
+    section .container-btn-modales .container-btn-modal:hover {
       background-color: #ff0066; }
-      section .container-de-localidades .container-de-localidad:hover:hover h3 {
+      section .container-btn-modales .container-btn-modal:hover:hover h3 {
+        color: white;
+        font-size: 1.8em;
+        position: relative;
+        z-index: 2; }
+      section .container-btn-modales .container-btn-modal:hover:hover .overlay {
+        animation: slide-in 0.5s forwards, slide-out 0.5s 2s forwards; }
+    section .container-btn-modales .container-btn-modal .container-info {
+      position: relative;
+      z-index: 2; }
+      section .container-btn-modales .container-btn-modal .container-info h3 {
+        color: #034069;
+        font-size: 2em;
+        margin: 12px 0;
+        font-weight: bold;
+        display: block;
+        color: white;
+        font-size: 1.3em;
+        transition: color 0.5s ease, font-size 0.5s ease;
+        text-align: center; }
+  section .container-btn-modales .overlay {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    opacity: 0.5;
+    /* Ajusta la opacidad de la imagen */
+    z-index: 1; }
+
+@keyframes slide-in {
+  from {
+    left: -100%; }
+  to {
+    left: 0; } }
+
+@keyframes slide-out {
+  from {
+    left: 0; }
+  to {
+    left: 100%; } }
+
+@keyframes change-bg {
+  to {
+    background-color: #ff0066;
+    /* Nuevo color de fondo */ } }
+
+section .container-de-gastronomia {
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-bottom: 24px; }
+  section .container-de-gastronomia .container-btn-gastronomia {
+    /*flex: 1 1 33%;*/
+    width: 500px;
+    height: 200px;
+    flex-direction: row;
+    /*padding: 16px;*/
+    background-color: #034069;
+    margin: 5px;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.5s ease; }
+    section .container-de-gastronomia .container-btn-gastronomia:hover .overlay {
+      animation: slide-in 0.5s forwards, slide-out 0.5s 2s forwards; }
+    section .container-de-gastronomia .container-btn-gastronomia:hover {
+      animation: change-bg 0.5s 2.5s forwards;
+      /* Retrasa el cambio de fondo hasta que la imagen se haya retirado */ }
+    section .container-de-gastronomia .container-btn-gastronomia:hover {
+      background-color: #ff0066; }
+      section .container-de-gastronomia .container-btn-gastronomia:hover:hover h3 {
         color: white;
         font-size: 2em;
         position: relative;
         z-index: 2; }
-      section .container-de-localidades .container-de-localidad:hover:hover .overlay {
+      section .container-de-gastronomia .container-btn-gastronomia:hover:hover .overlay {
         animation: slide-in 0.5s forwards, slide-out 0.5s 2s forwards; }
-    section .container-de-localidades .container-de-localidad .container-info {
+    section .container-de-gastronomia .container-btn-gastronomia .container-info {
       position: relative;
       z-index: 2; }
-      section .container-de-localidades .container-de-localidad .container-info h3 {
+      section .container-de-gastronomia .container-btn-gastronomia .container-info h3 {
         color: #034069;
         font-size: 2em;
         margin: 12px 0;
@@ -300,7 +382,7 @@ section .container-de-localidades {
         color: white;
         font-size: 1.3em;
         transition: color 0.5s ease, font-size 0.5s ease; }
-  section .container-de-localidades .overlay {
+  section .container-de-gastronomia .overlay {
     position: absolute;
     top: 0;
     left: -100%;

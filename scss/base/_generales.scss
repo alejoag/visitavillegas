@@ -81,16 +81,26 @@ footer {
 /*Componente comun a todas las paginas*/
 .encabezados {
     text-align: center;
+    background-size: cover; /* Ajusta la imagen para que cubra toda la sección */
+    background-position: center; /* Centra la imagen */ 
+    padding: 50px;
+    margin-bottom: 24px;
 
     .pag-titulo {
         @include estilo-titulos;
         font-size: 1.5em;
+        color: nth($colores, 3);
     }
 
     .pag-parrafo {
         @include estilo-parrafo;
         padding-left: 24px;
         padding-right: 24px;
+        color: nth($colores, 3),
+    }
+    .sombra{
+        background-color: black;
+        z-index: 1;
     }
 }
 
