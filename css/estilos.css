@@ -5,37 +5,37 @@
 /*Variable*/
 /*MAP*/
 /*EXTEND*/
-.flex-center, section .container-btn-modales, section .container-btn-modales .container-btn-modal, section .container-de-gastronomia, section .container-de-gastronomia .container-btn-gastronomia, footer .container-data-uno {
+.flex-center, section .container-btn-modales, section .container-btn-modales .container-btn-modal, footer .container-data-uno {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; }
 
 /*MIXIN*/
+/* RESET CSS */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
+/* FONT FAMILY */
 body,
 ul {
   font-family: "poppins"; }
 
-body {
-  background-color: #f8f9fa;
-  position: relative;
-  display: flex;
-  flex-direction: column; }
-
+/* GENERAL */
 html,
 body {
   height: 100%;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f9fa;
+  position: relative; }
 
-header,
-section,
-footer {
+/* HEADER, SECTION, FOOTER */
+header, section, footer {
   flex: 0 0 auto; }
 
 section {
@@ -45,7 +45,7 @@ footer {
   flex-shrink: 0;
   margin-top: auto; }
 
-/*Componente comun a todas las paginas*/
+/*PORTADAS*/
 .encabezados {
   text-align: center;
   background-size: cover;
@@ -74,7 +74,10 @@ footer {
     z-index: 1; }
 
 /*MODIFICACIONES A LOS COMPONENTES DE BOOTSTRAP*/
-/*NAV*/
+/*NAV DE BOOTSTRAP*/
+nav .container-fluid .collapse ul li a {
+  color: #034069; }
+
 nav .container-fluid .collapse ul .underline {
   position: relative;
   font-size: 1rem;
@@ -102,10 +105,8 @@ nav .container-fluid .collapse ul .underline {
   nav .container-fluid .collapse ul .underline:hover::after {
     width: 100%;
     /* Expande el subrayado al 100% del ancho del enlace */ }
-  nav .container-fluid .collapse ul .underline .nav-link {
-    color: #034069; }
-    nav .container-fluid .collapse ul .underline .nav-link:hover {
-      color: #ff0066; }
+  nav .container-fluid .collapse ul .underline .nav-link:hover {
+    color: #ff0066; }
 
 nav .container-fluid .collapse ul .actual {
   font-weight: 600;
@@ -128,18 +129,7 @@ nav .nav-icono-contenedor {
     nav .nav-icono-contenedor .nav-icono:hover {
       color: #ff0066; }
 
-/*CARDS ACTIVIDADES*/
-.cards-section {
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-bottom: 24px; }
-  .cards-section .c-card {
-    border: #034069, solid;
-    border-radius: 16px;
-    background-color: white;
-    overflow: hidden; }
-
-/*MODAL HOSPEDAJES y PUEBLOS*/
+/*MODAL HOSPEDAJES, PUEBLOS, GASTRONOMIA*/
 .modal .modal-dialog .modal-content .modal-header h5 {
   color: #034069;
   font-size: 2em;
@@ -177,24 +167,23 @@ nav .nav-icono-contenedor {
 .modal .modal-dialog .modal-content .modal-body .pueblos ul li::marker {
   color: #034069; }
 
-/*CARDS GASTRONOMIA*/
-.gastronomia-container {
-  padding-left: 24px;
-  padding-right: 24px;
+.modal .modal-dialog .modal-content .modal-footer button {
+  background-color: #034069;
+  border: none; }
+  .modal .modal-dialog .modal-content .modal-footer button:hover {
+    background-color: #ff0066; }
+
+/*MAPA*/
+.mapa {
   padding-bottom: 24px; }
-  .gastronomia-container .row .col .card {
-    border: #034069, solid;
-    border-radius: 16px;
-    background-color: white;
-    overflow: hidden; }
-    .gastronomia-container .row .col .card .card-body .gastronomia {
-      list-style: none; }
-      .gastronomia-container .row .col .card .card-body .gastronomia .card-title {
-        color: #034069; }
-      .gastronomia-container .row .col .card .card-body .gastronomia p {
-        color: gray; }
 
 /*HOME*/
+/* CAROUSEL */
+section .carousel .carousel-inner .carousel-item img {
+  min-height: 250px;
+  /* Altura mínima para pantallas grandes */
+  object-fit: cover; }
+
 /*TEXTO PRINCIPAL*/
 main {
   display: flex;
@@ -226,13 +215,7 @@ main {
     width: 50%;
     margin: 10px; }
 
-/* CAROUSEL */
-section .carousel .carousel-inner .carousel-item img {
-  min-height: 250px;
-  /* Altura mínima para pantallas grandes */
-  object-fit: cover; }
-
-/*__CARDS HOME*/
+/*CARDS*/
 .card-display {
   display: grid;
   grid-template-areas: "a-uno b-uno c-uno" "a-dos b-dos c-dos";
@@ -321,78 +304,9 @@ section .container-btn-modales {
         color: white;
         font-size: 1.3em;
         transition: color 0.5s ease, font-size 0.5s ease;
-        text-align: center; }
+        text-align: center;
+        cursor: pointer; }
   section .container-btn-modales .overlay {
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    opacity: 0.5;
-    /* Ajusta la opacidad de la imagen */
-    z-index: 1; }
-
-@keyframes slide-in {
-  from {
-    left: -100%; }
-  to {
-    left: 0; } }
-
-@keyframes slide-out {
-  from {
-    left: 0; }
-  to {
-    left: 100%; } }
-
-@keyframes change-bg {
-  to {
-    background-color: #ff0066;
-    /* Nuevo color de fondo */ } }
-
-section .container-de-gastronomia {
-  flex-direction: column;
-  flex-wrap: wrap;
-  padding-bottom: 24px; }
-  section .container-de-gastronomia .container-btn-gastronomia {
-    /*flex: 1 1 33%;*/
-    width: 500px;
-    height: 200px;
-    flex-direction: row;
-    /*padding: 16px;*/
-    background-color: #034069;
-    margin: 5px;
-    border-radius: 16px;
-    position: relative;
-    overflow: hidden;
-    transition: background-color 0.5s ease; }
-    section .container-de-gastronomia .container-btn-gastronomia:hover .overlay {
-      animation: slide-in 0.5s forwards, slide-out 0.5s 2s forwards; }
-    section .container-de-gastronomia .container-btn-gastronomia:hover {
-      animation: change-bg 0.5s 2.5s forwards;
-      /* Retrasa el cambio de fondo hasta que la imagen se haya retirado */ }
-    section .container-de-gastronomia .container-btn-gastronomia:hover {
-      background-color: #ff0066; }
-      section .container-de-gastronomia .container-btn-gastronomia:hover:hover h3 {
-        color: white;
-        font-size: 2em;
-        position: relative;
-        z-index: 2; }
-      section .container-de-gastronomia .container-btn-gastronomia:hover:hover .overlay {
-        animation: slide-in 0.5s forwards, slide-out 0.5s 2s forwards; }
-    section .container-de-gastronomia .container-btn-gastronomia .container-info {
-      position: relative;
-      z-index: 2; }
-      section .container-de-gastronomia .container-btn-gastronomia .container-info h3 {
-        color: #034069;
-        font-size: 2em;
-        margin: 12px 0;
-        font-weight: bold;
-        display: block;
-        color: white;
-        font-size: 1.3em;
-        transition: color 0.5s ease, font-size 0.5s ease; }
-  section .container-de-gastronomia .overlay {
     position: absolute;
     top: 0;
     left: -100%;
@@ -474,7 +388,7 @@ footer {
   grid-template-areas: "logo data";
   justify-content: space-around; }
   footer .logo-footer img {
-    width: 300px;
+    width: 250px;
     height: auto; }
   footer .container-data-uno {
     align-items: start;

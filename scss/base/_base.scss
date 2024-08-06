@@ -1,0 +1,38 @@
+/*Lista*/
+$colores: #034069, gray, white, #ff0066, #f8f9fa;
+
+/*Variable*/
+$c-familyfont: "poppins";
+$borde: nth($colores, 1), solid;
+$c-font-size: 1rem;
+$c-padding-a: 1rem;
+
+/*MAP*/
+$cards: (
+    borde: $borde,
+    redondez: 16px,
+    color-fondo: nth($colores, 3),
+);
+
+/*EXTEND*/
+.flex-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*MIXIN*/
+@mixin estilo-titulos($color: nth($colores, 1), $font-size: 2em, $margin: 12px 0, $font-weight: bold) {
+    color: $color;
+    font-size: $font-size;
+    margin: $margin;
+    font-weight: $font-weight;
+}
+
+@mixin estilo-parrafo($color: nth($colores, 2), $size: 16px, $margin: 10px 0) {
+    color: $color;
+    font-size: $size;
+    margin: $margin;
+    line-height: 1.5;
+}
